@@ -1,12 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, helvetica neue, helvetica, arial, sans-serif; }
 
 .txt-clr{
-    color: #FFA341 !important;
+    color: #f47820 !important;
 }
 
 .background-clr{
-    background-color: #FFA341 !important;
+    background-color: #f47820 !important;
+}
+
+.heading{
+    font-size: 24px !important;
+    letter-spacing: 1px !important;
+    font-weight: 600 !important;
+    line-height: 30px !important;
+}
+
+.w-20{
+    width: 20% !important;
+}
+
+.w-15{
+    width: 15% !important;
+}
+
+.w-18{
+    width: 18% !important;
+}
+
+.f-s-16{
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+
+.f-s-18{
+    font-size: 18px !important;
+    font-weight: 500 !important;
 }
