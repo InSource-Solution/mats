@@ -5,6 +5,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [],
@@ -15,6 +18,9 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatTabsModule,
     MatProgressBarModule,
     MatTooltipModule,
+    MatInputModule,
+    FormsModule,
+    MatFormFieldModule
   ],
   exports: [
     MatButtonModule,
@@ -22,7 +28,10 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatIconModule,
     MatTabsModule,
     MatProgressBarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatInputModule,
+    FormsModule,
+    MatFormFieldModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
