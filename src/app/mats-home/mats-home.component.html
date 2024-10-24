@@ -11,7 +11,7 @@
                     </button>
                     <div class="mx-2">
                         <p class="m-0 p-0">Open Time</p>
-                        <p class="m-0 p-0">Mon-Sun | 24 Hours</p>
+                        <p class="m-0 p-0">24 Hours</p>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
 
 <ng-container>
     <div class="w-100">
-        <img src="../../assets/Banner.jpg" width="100%">
+        <img src="../../assets/car.jpeg" width="100%">
     </div>
 </ng-container>
 
@@ -57,7 +57,7 @@
 </ng-container>
 
 <ng-container>
-    <div class="container mt-2">
+    <div class="container mt-4 mb-4">
         <div class="">
             <p class="m-0 heading txt-clr">WHAT WE OFFER</p>
             <mat-progress-bar class="w-20" mode="buffer" color="txt-clr"></mat-progress-bar>
@@ -75,20 +75,53 @@
 </ng-container>
 
 <ng-container>
-    <div class="container d-flex justify-content-center mt-5">
-        <div class="">
-            <p class="txt-clr heading">ABOUT US</p>
-            <mat-progress-bar class="w-15" mode="buffer" color="txt-clr"></mat-progress-bar>
+    <div class="container mt-5">
+        <p class="txt-clr heading mb-0">ABOUT US</p>
+        <mat-progress-bar class="w-15" mode="buffer" color="txt-clr"></mat-progress-bar>
+
+        <div class="pt-3">
+            <p class="">
+                Mats Towing &amp; Transport is one the leading international Transport, relocation and logistics management company delivering cost-saving solutions Around the World.<br><br>
+                    
+                Mats evolve comprehensive Transport, logistics and relocation service plans tailored to meet exact requirements of customers. This is expert by learning customers’ exact objectives with regards to their internal and external needs, thus make sure that Mats will provide comprehensive services more consistently than any other service provider in the market.<br><br>
+                
+                Our well proven multimodal transportation System to the Entire World ensures international reach whatever your cargo and timeframe is. As the preferred Logistics Partner for various companies and the first point of contact to increase supply chain productivity in the Global Market, we are very proud for our reputation and always struggle to maintain it.<br><br>
+                
+                We treat clients as our highest priority. Our services and solutions are driven for their ultimate benefit. Delivering meaningful, measurable added-value to our customers is an integral part of our culture. With our innovative solutions, we can help you to plan for business strategies, improve customer service, accelerate order cycle times, and tightened control of the supply chain.<br><br>
+                
+                For Further detail Please Do contact With Us <span class="txt-clr">MATSOFFICAL9&#64;GMAIL.COM</span>
+            </p>
+        </div>
+
+        <div class="pt-3">
+            <mat-stepper>
+                <mat-step label="OUR LEADERSHIP" state="chat">
+                    <p class="text-white">Underpin by our own offices and associates worldwide, Costa Logistics employs a team of professionals that follow up and follows through on each and every business we manage. With our Worldwide Service Network across 65 countries, we focus to be the most reliable Freight Forwarding, Removals and Relocation and Logistics Company in the market with an wonderful, people-driven and committed approach to serving our valued customers.<br>
+                        While we are skilled in offering worldwide moving, freight forwarding, logistics related services, we are not to be satisfied with only that: we also undertake to be committed advisors to our valued customers at all times.
+                    </p>
+                </mat-step>
+                <mat-step label="PROJECT HANDLING" state="chat">
+                    <p class="text-white">Underpin by our own offices and associates worldwide, Costa Logistics employs a team of professionals that follow up and follows through on each and every business we manage. With our Worldwide Service Network across 65 countries, we focus to be the most reliable Freight Forwarding, Removals and Relocation and Logistics Company in the market with an wonderful, people-driven and committed approach to serving our valued customers.<br>
+                        While we are skilled in offering worldwide moving, freight forwarding, logistics related services, we are not to be satisfied with only that: we also undertake to be committed advisors to our valued customers at all times.
+                    </p>
+                </mat-step>
+                <mat-step label="WHY US ?" state="chat">
+                    <p class="text-white">Underpin by our own offices and associates worldwide, Costa Logistics employs a team of professionals that follow up and follows through on each and every business we manage. With our Worldwide Service Network across 65 countries, we focus to be the most reliable Freight Forwarding, Removals and Relocation and Logistics Company in the market with an wonderful, people-driven and committed approach to serving our valued customers.<br>
+                        While we are skilled in offering worldwide moving, freight forwarding, logistics related services, we are not to be satisfied with only that: we also undertake to be committed advisors to our valued customers at all times.
+                    </p>
+                </mat-step>
+                <ng-template matStepperIcon="chat">
+                    <mat-icon>forum</mat-icon>
+                </ng-template>
+            </mat-stepper>
         </div>
     </div>
 </ng-container>
 
 <ng-container>
-    <div class="container d-flex justify-content-center mt-5">
-        <div class="">
-            <p class="txt-clr heading">OUR SERVICE'S</p>
-            <mat-progress-bar class="w-18" mode="buffer" color="txt-clr"></mat-progress-bar>
-        </div>
+    <div class="container mt-5">
+        <p class="txt-clr heading mb-0">OUR SERVICE'S</p>
+        <mat-progress-bar class="w-18" mode="buffer" color="txt-clr"></mat-progress-bar>
     </div>
 </ng-container>
 
@@ -100,41 +133,45 @@
         </div>
         <div class="row mt-3">
             <div class="col-md-6 mb-5">
-                <mat-card class="bg-white p-3 shadow-lg light-border-color">
-                    <p class="txt-clr heading text-center pt-3 pb-4">CONTACT US</p>
+                <mat-card class="contact p-3 shadow-lg light-border-color">
+                    <p class="text-white heading text-center pt-3 pb-4">CONTACT US</p>
 
                     <form class="w-100">
                         <mat-form-field class="w-100 form-input">
-                            <mat-label>Name</mat-label>
-                            <input matInput placeholder="Write Your Name..." [(ngModel)]="userModel.name"
+                            <mat-label class="text-white">Name</mat-label>
+                            <input matInput placeholder="Write Your Name..." class="text-white" [(ngModel)]="userModel.name"
                                 [ngModelOptions]="{standalone: true}">
                         </mat-form-field>
 
                         <mat-form-field class="w-100 form-input">
-                            <mat-label>Email</mat-label>
-                            <input matInput placeholder="Write Your Email..." [(ngModel)]="userModel.email"
+                            <mat-label class="text-white">Email</mat-label>
+                            <input matInput placeholder="Write Your Email..." class="text-white" [(ngModel)]="userModel.email"
                                 [ngModelOptions]="{standalone: true}" (change)="onEmailChange()">
+                                <span class="text-danger f-s-12" *ngIf="userModel.isError">Please enter a valid email address</span>
                         </mat-form-field>
-                        <span class="text-danger f-s-12" *ngIf="userModel.isError">Please enter a valid email
-                            address</span>
 
                         <mat-form-field class="w-100 form-input">
-                            <mat-label>Phone</mat-label>
+                            <mat-label class="text-white" class="text-white">Phone</mat-label>
                             <input matInput placeholder="Write Your Phone..." [(ngModel)]="userModel.phone"
                                 [ngModelOptions]="{standalone: true}">
                         </mat-form-field>
 
                         <mat-form-field class="w-100 form-input">
-                            <mat-label>Message</mat-label>
+                            <mat-label class="text-white" class="text-white">Message</mat-label>
                             <textarea matInput placeholder="Message....." [(ngModel)]="userModel.message"
                                 [ngModelOptions]="{standalone: true}"></textarea>
                         </mat-form-field>
+
+                        <div class="d-flex justify-content-center">
+                            <button mat-raised-button class="background-clr text-white f-w-b">Submit</button>
+                        </div>
                     </form>
                 </mat-card>
             </div>
             <div class="col-md-6">
-                <mat-card class="bg-white p-3 shadow-lg light-border-color">
-                    <iframe width="100%" height="400px" [src]="iframeSrc" frameborder="0" allowfullscreen></iframe>
+                <mat-card class="location p-3 shadow-lg light-border-color">
+                    <p class="text-white heading text-center pt-3 pb-4">LOCATION</p>
+                    <iframe width="100%" height="374px" [src]="iframeSrc" frameborder="0" allowfullscreen></iframe>
                 </mat-card>
             </div>
         </div>

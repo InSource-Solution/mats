@@ -7,6 +7,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatStepperModule } from '@angular/material/stepper';
+import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper'; 
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -20,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     MatTooltipModule,
     MatInputModule,
     FormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatStepperModule
   ],
   exports: [
     MatButtonModule,
@@ -31,7 +34,14 @@ import { FormsModule } from '@angular/forms';
     MatTooltipModule,
     MatInputModule,
     FormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatStepperModule
+  ],
+  providers: [
+    {
+      provide: STEPPER_GLOBAL_OPTIONS,
+      useValue: {displayDefaultIndicatorType: false},
+    },
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
