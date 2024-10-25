@@ -8,6 +8,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
+import { MatDialogModule } from '@angular/material/dialog';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper'; 
 import { FormsModule } from '@angular/forms';
 
@@ -23,7 +24,8 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     FormsModule,
     MatFormFieldModule,
-    MatStepperModule
+    MatStepperModule,
+    MatDialogModule
   ],
   exports: [
     MatButtonModule,
@@ -35,7 +37,8 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     FormsModule,
     MatFormFieldModule,
-    MatStepperModule
+    MatStepperModule,
+    MatDialogModule
   ],
   providers: [
     {

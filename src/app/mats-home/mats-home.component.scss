@@ -25,3 +25,38 @@
     width: 100%;
     height: 512px;
 }
+
+::ng-deep .overwrite-stepper{
+    .mat-step-text-label {
+        color: black !important;
+    }
+    .mat-stepper-horizontal-line{
+        border-top-color: black !important;
+    }
+    .mat-step-icon.mat-step-icon-state-done{
+        background-color: #f47820 !important;
+    }
+    .mat-step-icon.mat-step-icon-state-chat.mat-step-icon-selected{
+        background-color: #f47820 !important;
+    }
+    .mat-step-icon.mat-step-icon-state-edit.mat-step-icon-selected{
+        background-color: #f47820 !important;
+    }
+}
+
+.service-card{
+    background-color: white !important;
+    padding: 10px;
+}
+
+.service-card-icon{
+    font-size: 38px !important;
+    width: 17% !important;
+    height: 10% !important;
+}
+
+.service-card-text{
+    font-size: 24px !important;
+    letter-spacing: 2px !important;
+    font-weight: 600 !important;
+}

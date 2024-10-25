@@ -26,12 +26,20 @@ body { margin: 0; font-family: Roboto, helvetica neue, helvetica, arial, sans-se
     line-height: 30px !important;
 }
 
+.pointer{
+    cursor: pointer !important;
+}
+
 .w-20{
     width: 20% !important;
 }
 
 .w-30{
     width: 30% !important;
+}
+
+.w-70{
+    width: 70% !important;
 }
 
 .w-15{

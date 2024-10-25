@@ -81,33 +81,61 @@
 
         <div class="pt-3">
             <p class="">
-                Mats Towing &amp; Transport is one the leading international Transport, relocation and logistics management company delivering cost-saving solutions Around the World.<br><br>
-                    
-                Mats evolve comprehensive Transport, logistics and relocation service plans tailored to meet exact requirements of customers. This is expert by learning customers’ exact objectives with regards to their internal and external needs, thus make sure that Mats will provide comprehensive services more consistently than any other service provider in the market.<br><br>
-                
-                Our well proven multimodal transportation System to the Entire World ensures international reach whatever your cargo and timeframe is. As the preferred Logistics Partner for various companies and the first point of contact to increase supply chain productivity in the Global Market, we are very proud for our reputation and always struggle to maintain it.<br><br>
-                
-                We treat clients as our highest priority. Our services and solutions are driven for their ultimate benefit. Delivering meaningful, measurable added-value to our customers is an integral part of our culture. With our innovative solutions, we can help you to plan for business strategies, improve customer service, accelerate order cycle times, and tightened control of the supply chain.<br><br>
-                
+                Mats Towing &amp; Transport is one the leading international Transport, relocation and logistics
+                management company delivering cost-saving solutions Around the World.<br><br>
+
+                Mats evolve comprehensive Transport, logistics and relocation service plans tailored to meet exact
+                requirements of customers. This is expert by learning customers’ exact objectives with regards to their
+                internal and external needs, thus make sure that Mats will provide comprehensive services more
+                consistently than any other service provider in the market.<br><br>
+
+                Our well proven multimodal transportation System to the Entire World ensures international reach
+                whatever your cargo and timeframe is. As the preferred Logistics Partner for various companies and the
+                first point of contact to increase supply chain productivity in the Global Market, we are very proud for
+                our reputation and always struggle to maintain it.<br><br>
+
+                We treat clients as our highest priority. Our services and solutions are driven for their ultimate
+                benefit. Delivering meaningful, measurable added-value to our customers is an integral part of our
+                culture. With our innovative solutions, we can help you to plan for business strategies, improve
+                customer service, accelerate order cycle times, and tightened control of the supply chain.<br><br>
+
                 For Further detail Please Do contact With Us <span class="txt-clr">MATSOFFICAL9&#64;GMAIL.COM</span>
             </p>
         </div>
 
         <div class="pt-3">
-            <mat-stepper>
-                <mat-step label="OUR LEADERSHIP" state="chat">
-                    <p class="text-white">Underpin by our own offices and associates worldwide, Costa Logistics employs a team of professionals that follow up and follows through on each and every business we manage. With our Worldwide Service Network across 65 countries, we focus to be the most reliable Freight Forwarding, Removals and Relocation and Logistics Company in the market with an wonderful, people-driven and committed approach to serving our valued customers.<br>
-                        While we are skilled in offering worldwide moving, freight forwarding, logistics related services, we are not to be satisfied with only that: we also undertake to be committed advisors to our valued customers at all times.
+            <mat-stepper class="bg-white overwrite-stepper">
+                <mat-step label="OUR LEADERSHIP" state="chat" class="stepLabel">
+                    <p class="">Underpin by our own offices and associates worldwide, Costa Logistics employs a team of
+                        professionals that follow up and follows through on each and every business we manage. With our
+                        Worldwide Service Network across 65 countries, we focus to be the most reliable Freight
+                        Forwarding, Removals and Relocation and Logistics Company in the market with an wonderful,
+                        people-driven and committed approach to serving our valued customers.<br>
+                        While we are skilled in offering worldwide moving, freight forwarding, logistics related
+                        services, we are not to be satisfied with only that: we also undertake to be committed advisors
+                        to our valued customers at all times.
                     </p>
                 </mat-step>
-                <mat-step label="PROJECT HANDLING" state="chat">
-                    <p class="text-white">Underpin by our own offices and associates worldwide, Costa Logistics employs a team of professionals that follow up and follows through on each and every business we manage. With our Worldwide Service Network across 65 countries, we focus to be the most reliable Freight Forwarding, Removals and Relocation and Logistics Company in the market with an wonderful, people-driven and committed approach to serving our valued customers.<br>
-                        While we are skilled in offering worldwide moving, freight forwarding, logistics related services, we are not to be satisfied with only that: we also undertake to be committed advisors to our valued customers at all times.
+                <mat-step label="PROJECT HANDLING" state="chat" class="stepLabel">
+                    <p class="">Underpin by our own offices and associates worldwide, Costa Logistics employs a team of
+                        professionals that follow up and follows through on each and every business we manage. With our
+                        Worldwide Service Network across 65 countries, we focus to be the most reliable Freight
+                        Forwarding, Removals and Relocation and Logistics Company in the market with an wonderful,
+                        people-driven and committed approach to serving our valued customers.<br>
+                        While we are skilled in offering worldwide moving, freight forwarding, logistics related
+                        services, we are not to be satisfied with only that: we also undertake to be committed advisors
+                        to our valued customers at all times.
                     </p>
                 </mat-step>
-                <mat-step label="WHY US ?" state="chat">
-                    <p class="text-white">Underpin by our own offices and associates worldwide, Costa Logistics employs a team of professionals that follow up and follows through on each and every business we manage. With our Worldwide Service Network across 65 countries, we focus to be the most reliable Freight Forwarding, Removals and Relocation and Logistics Company in the market with an wonderful, people-driven and committed approach to serving our valued customers.<br>
-                        While we are skilled in offering worldwide moving, freight forwarding, logistics related services, we are not to be satisfied with only that: we also undertake to be committed advisors to our valued customers at all times.
+                <mat-step label="WHY US ?" state="chat" class="">
+                    <p class="">Underpin by our own offices and associates worldwide, Costa Logistics employs a team of
+                        professionals that follow up and follows through on each and every business we manage. With our
+                        Worldwide Service Network across 65 countries, we focus to be the most reliable Freight
+                        Forwarding, Removals and Relocation and Logistics Company in the market with an wonderful,
+                        people-driven and committed approach to serving our valued customers.<br>
+                        While we are skilled in offering worldwide moving, freight forwarding, logistics related
+                        services, we are not to be satisfied with only that: we also undertake to be committed advisors
+                        to our valued customers at all times.
                     </p>
                 </mat-step>
                 <ng-template matStepperIcon="chat">
@@ -120,13 +148,25 @@
 
 <ng-container>
     <div class="container mt-5">
-        <p class="txt-clr heading mb-0">OUR SERVICE'S</p>
-        <mat-progress-bar class="w-18" mode="buffer" color="txt-clr"></mat-progress-bar>
+        <div class="">
+            <p class="txt-clr heading mb-0">OUR SERVICE'S</p>
+            <mat-progress-bar class="w-18" mode="buffer" color="txt-clr"></mat-progress-bar>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-3" *ngFor="let _service of serviceData">
+                <mat-card class="shadow-lg light-border-color service-card pointer" [matTooltip]="_service.toolTip" (click)="onOpenDetail(_service)">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <mat-icon class="service-card-icon">{{ _service.icon }}</mat-icon>
+                        <p class="mb-0 service-card-text">{{ _service.title }}</p>
+                    </div>
+                </mat-card>
+            </div>
+        </div>
     </div>
 </ng-container>
 
 <ng-container>
-    <div class="container">
+    <div class="container mt-5">
         <div class="">
             <p class="txt-clr heading mb-0">CONTACT US / LOCATION</p>
             <mat-progress-bar class="w-30" mode="buffer" color="txt-clr"></mat-progress-bar>
@@ -139,15 +179,17 @@
                     <form class="w-100">
                         <mat-form-field class="w-100 form-input">
                             <mat-label class="text-white">Name</mat-label>
-                            <input matInput placeholder="Write Your Name..." class="text-white" [(ngModel)]="userModel.name"
-                                [ngModelOptions]="{standalone: true}">
+                            <input matInput placeholder="Write Your Name..." class="text-white"
+                                [(ngModel)]="userModel.name" [ngModelOptions]="{standalone: true}">
                         </mat-form-field>
 
                         <mat-form-field class="w-100 form-input">
                             <mat-label class="text-white">Email</mat-label>
-                            <input matInput placeholder="Write Your Email..." class="text-white" [(ngModel)]="userModel.email"
-                                [ngModelOptions]="{standalone: true}" (change)="onEmailChange()">
-                                <span class="text-danger f-s-12" *ngIf="userModel.isError">Please enter a valid email address</span>
+                            <input matInput placeholder="Write Your Email..." class="text-white"
+                                [(ngModel)]="userModel.email" [ngModelOptions]="{standalone: true}"
+                                (change)="onEmailChange()">
+                            <span class="text-danger f-s-12" *ngIf="userModel.isError">Please enter a valid email
+                                address</span>
                         </mat-form-field>
 
                         <mat-form-field class="w-100 form-input">
