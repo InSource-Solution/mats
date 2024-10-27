@@ -2,7 +2,8 @@ import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { MaterialModule } from '../material.module';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { ServiceDetailsComponent } from '../service-details/service-details.component';
 
 @Component({
   selector: 'app-mats-home',
@@ -24,8 +25,8 @@ export class MatsHomeComponent implements OnInit {
     { icon: 'done_all', desc: 'PACKAGING AND STORAGE, OR DOOR-TO-DOOR DELIVERY' },
   ];
   serviceData = [
-    { title: 'TRANSPORT', subTitle: "Transport Detail's", toolTip: "Open Transport Detail's", icon: 'local_shipping', desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel asperiores illo non dolore hic libero accusantium odio iste modi commodi eos sed at molestias ipsum nulla inventore iure recusandae, culpa nesciunt. Quam omnis molestiae voluptatem, officiis aperiam autem hic adipisci deserunt voluptas a voluptatibus atque temporibus qui eius? Et at incidunt distinctio, optio corrupti molestias officia commodi provident dicta minus earum placeat saepe harum unde illum. Nisi, vel in. In quaerat, voluptates ipsum similique facere pariatur corporis doloremque, dolor nostrum harum, possimus laudantium et adipisci minus dolores eligendi! Ducimus, odit deserunt modi at eaque odio magnam dicta quibusdam? Expedita, provident?'},
-    { title: 'TOWING', subTitle: "Towing Detail's", toolTip: "Open Towing Detail's", icon: 'trending_up', desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel asperiores illo non dolore hic libero accusantium odio iste modi commodi eos sed at molestias ipsum nulla inventore iure recusandae, culpa nesciunt. Quam omnis molestiae voluptatem, officiis aperiam autem hic adipisci deserunt voluptas a voluptatibus atque temporibus qui eius? Et at incidunt distinctio, optio corrupti molestias officia commodi provident dicta minus earum placeat saepe harum unde illum. Nisi, vel in. In quaerat, voluptates ipsum similique facere pariatur corporis doloremque, dolor nostrum harum, possimus laudantium et adipisci minus dolores eligendi! Ducimus, odit deserunt modi at eaque odio magnam dicta quibusdam? Expedita, provident?'}
+    { title: 'TRANSPORT', subTitle: "Transport Detail's", toolTip: "Open Transport Detail's", infoText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', cardSrc: '../../assets/contact-us.jpeg', imgs: [{src: '../../assets/car.jpeg'}, {src: '../../assets/car.jpeg'}, {src: '../../assets/car.jpeg'}, {src: '../../assets/car.jpeg'}, {src: '../../assets/car.jpeg'}, {src: '../../assets/car.jpeg'}], desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel asperiores illo non dolore hic libero accusantium odio iste modi commodi eos sed at molestias ipsum nulla inventore iure recusandae, culpa nesciunt. Quam omnis molestiae voluptatem, officiis aperiam autem hic adipisci deserunt voluptas a voluptatibus atque temporibus qui eius? Et at incidunt distinctio, optio corrupti molestias officia commodi provident dicta minus earum placeat saepe harum unde illum. Nisi, vel in. In quaerat, voluptates ipsum similique facere pariatur corporis doloremque, dolor nostrum harum, possimus laudantium et adipisci minus dolores eligendi! Ducimus, odit deserunt modi at eaque odio magnam dicta quibusdam? Expedita, provident?'},
+    { title: 'TOWING', subTitle: "Towing Detail's", toolTip: "Open Towing Detail's", infoText: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.', cardSrc: '../../assets/location.jpeg', desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel asperiores illo non dolore hic libero accusantium odio iste modi commodi eos sed at molestias ipsum nulla inventore iure recusandae, culpa nesciunt. Quam omnis molestiae voluptatem, officiis aperiam autem hic adipisci deserunt voluptas a voluptatibus atque temporibus qui eius? Et at incidunt distinctio, optio corrupti molestias officia commodi provident dicta minus earum placeat saepe harum unde illum. Nisi, vel in. In quaerat, voluptates ipsum similique facere pariatur corporis doloremque, dolor nostrum harum, possimus laudantium et adipisci minus dolores eligendi! Ducimus, odit deserunt modi at eaque odio magnam dicta quibusdam? Expedita, provident?'}
   ];
 
   constructor(private sanitizer: DomSanitizer, private _dialog: MatDialog){}
@@ -44,6 +45,11 @@ export class MatsHomeComponent implements OnInit {
 
   onOpenDetail(element: any){
     if(!element) return;
+    const dialogConfig = new MatDialogConfig();
+    dialogConfig.width = '60vw';
+    dialogConfig.data = element;
+    dialogConfig.disableClose = true;
+    this._dialog.open(ServiceDetailsComponent, dialogConfig);
   }
 
 }

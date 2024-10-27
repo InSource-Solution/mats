@@ -1,0 +1,23 @@
+::ng-deep .dialog-header {
+    background-color: white !important;
+    color: black !important;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+::ng-deep .dialog-content {
+    background-color: white !important;
+    color: black !important;
+    width: 100%;
+    overflow: auto;
+    max-height: 500px;
+}
+
+::ng-deep .dialog-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    border-radius: 2px;
+}

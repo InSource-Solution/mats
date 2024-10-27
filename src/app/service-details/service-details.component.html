@@ -1,0 +1,18 @@
+<ng-container class="">
+    <div class="dialog-header px-4 py-3" mat-dialog-title>
+        <div class="text-start w-100">
+            <p class="heading mb-0">{{ _dialogData?.subTitle || "MATS" }}</p>
+        </div>
+        <mat-icon (click)="onClose()" class="text-danger pointer" matTooltip="Close">close</mat-icon>
+    </div>
+    <mat-dialog-content class="dialog-content pt-2">
+        <div *ngIf="_dialogData?.imgs?.length > 0">
+            <div class="row p-2">
+                <div class="col-md-2" *ngFor="let img of _dialogData?.imgs">
+                    <img [src]="img.src" class="dialog-img">
+                </div>
+            </div>
+        </div>
+        <span> {{ _dialogData?.desc || "Error" }} </span>
+    </mat-dialog-content>
+</ng-container>

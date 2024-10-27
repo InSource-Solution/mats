@@ -49,14 +49,30 @@
     padding: 10px;
 }
 
-.service-card-icon{
-    font-size: 38px !important;
-    width: 17% !important;
-    height: 10% !important;
+.service-card-img{
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
 }
 
-.service-card-text{
-    font-size: 24px !important;
-    letter-spacing: 2px !important;
+.service-card-heading{
+    font-size: 15px !important;
+    letter-spacing: 1px !important;
     font-weight: 600 !important;
+}
+
+.service-card-more{
+    color: rgb(172, 23, 23) !important;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.service-card-more:hover{
+    color: rgb(172, 23, 23) !important;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: underline;
+    margin-left: 5px;
+    transition: 2s ease;
 }
