@@ -29,7 +29,7 @@
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center">
-                    <button mat-mini-fab class="background-clr text-white" matTooltip="Call On Whatapp"
+                    <button mat-mini-fab class="background-clr text-white" (click)="openWhatapp()" matTooltip="Call On Whatapp"
                         matTooltipPosition="above">
                         <mat-icon>wifi_calling_3</mat-icon>
                     </button>
@@ -147,13 +147,13 @@
 </ng-container>
 
 <ng-container>
-    <div class="container mt-5">
+    <div class="container mt-4">
         <div class="">
             <p class="txt-clr heading mb-0">OUR SERVICE'S</p>
             <mat-progress-bar class="w-18" mode="buffer" color="txt-clr"></mat-progress-bar>
         </div>
         <div class="row mt-4">
-            <div class="col-md-4" *ngFor="let _service of serviceData">
+            <div class="col-md-4 mt-2" *ngFor="let _service of serviceData">
                 <mat-card class="shadow-lg light-border-color service-card pointer">
                     <div class="d-flex align-items-center">
                         <div class="w-30">
@@ -166,6 +166,54 @@
                         </div>
                     </div>
                 </mat-card>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="../../assets/provide.jpeg" width="100%" height="350px" class="b-r-5">
+            </div>
+            <div class="col-md-6">
+                <p class="text-center heading l-s-2 txt-clr">Our Mission</p>
+                <p class="pt-2"> At <span class="txt-clr">Mats Towing &amp; Transport</span>, our objective is to offer commuters in the UAE and the GCC top-notch, dependable,
+                    and stress-free vehicle recovery and roadside assistance services. We endeavor to:
+                    <br><br>
+                    Provide unparalleled repair and towing service that prioritizes the safety and satisfaction of our clients.
+                    Establish enduring relationships with our consumers by consistently surpassing their expectations.
+                    <br><br>
+                    We must adapt and innovate our services to accommodate the evolving requirements of our consumers and the industry.
+                    <br><br>
+                    Maintain the principles of transparency, integrity, and honesty in all facets of our business.
+                    <br><br>
+                </p>
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="text-center heading l-s-2 txt-clr">Our Vision</p>
+                <p class="pt-2"> Our aim is to establish ourselves as the premier provider of 
+                    vehicle recovery services and roadside assistance in the United Arab Emirates and the broader Gulf Cooperation Council (GCC). Our objective is to:
+                    <br><br>
+                    Establish the industry’s benchmark for excellence by providing unparalleled customer service and quality.
+                    <br><br>
+                    Encourage an environment of perpetual development, in which innovation is the driving force behind our success 
+                    and enables us to maintain our position at the vanguard of the industry.
+                    <br><br>
+                    Ensure that we are the preferred option for vehicles in need of assistance, regardless of their location, by broadening our reach and capabilities.
+                    <br><br>
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="../../assets/sport.jpeg" width="100%" height="350px" class="b-r-5">
             </div>
         </div>
     </div>
@@ -222,6 +270,17 @@
                     <iframe width="100%" height="374px" [src]="iframeSrc" frameborder="0" allowfullscreen></iframe>
                 </mat-card>
             </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container>
+    <div class="d-flex align-items-center justify-content-between w-100 background-clr footer">
+        <div class="text-white f-s-16 l-s-2">
+            Copyright © 2024 MATS TOWING & TRANSPORT
+        </div>
+        <div class="text-white f-s-16 l-s-2">
+            Made By In-Source Solutions
         </div>
     </div>
 </ng-container>
