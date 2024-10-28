@@ -40,8 +40,10 @@ export class MatsHomeComponent implements OnInit {
     this.iframeSrc = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.0571425999738!2d67.0687035!3d24.930123199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f03da43bd75%3A0x54b7c34c6ec61368!2sMATS%20Towing%20%26%20Transport!5e0!3m2!1sen!2s!4v1729808322419!5m2!1sen!2s');
   }
 
-  openWhatapp(){
-    window.open('https://api.whatsapp.com/send?phone=923242887495', '_blank');
+  openWhatsapp(contactNumber: number){
+    if(!contactNumber) return;
+    window.open(`https://api.whatsapp.com/send?phone=${contactNumber}`, '_blank');
+    window.open('https://api.whatsapp.com/send?phone=923242887495', '_blank');    
   }
 
   onEmailChange(){
