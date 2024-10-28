@@ -77,6 +77,14 @@
     transition: 2s ease;
 }
 
-.footer{
-    padding: 20px !important;
+::ng-deep.panel {
+    .mat-expansion-panel{
+        background: white !important;
+        color: black !important;
+        border-radius: 8px;
+        border-top: #f47820 solid 4px;
+    }   
+    .mat-expansion-indicator::after{
+        color: black !important;
+    }
 }

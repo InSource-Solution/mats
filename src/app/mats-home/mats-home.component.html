@@ -173,7 +173,7 @@
 
 <ng-container>
     <div class="container mt-5">
-        <div class="row">
+        <div class="row d-flex align-items-center">
             <div class="col-md-6">
                 <img src="../../assets/provide.jpeg" width="100%" height="350px" class="b-r-5">
             </div>
@@ -197,7 +197,7 @@
 
 <ng-container>
     <div class="container mt-5">
-        <div class="row">
+        <div class="row d-flex align-items-center">
             <div class="col-md-6">
                 <p class="text-center heading l-s-2 txt-clr">Our Vision</p>
                 <p class="pt-2"> Our aim is to establish ourselves as the premier provider of 
@@ -275,13 +275,30 @@
 </ng-container>
 
 <ng-container>
-    <!-- <div class="d-flex align-items-center justify-content-between w-100 background-clr footer">
-        <div class="text-white f-s-16 l-s-2">
-            Copyright © 2024 MATS TOWING & TRANSPORT
+    <div class="container mt-4 mb-3">
+        <div class="row d-flex align-items-center">
+            <div class="col-md-6">
+                <p class="heading txt-clr">Frequently Asked Question (FAQ's)</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, maiores officia. Eligendi odit totam debitis recusandae adipisci harum explicabo, maxime eos fugit temporibus inventore, molestiae quasi labore!</p>
+            </div>
+            <div class="col-md-6">
+                <mat-accordion class="panel">
+                    <ng-container *ngFor="let item of faqData">
+                        <mat-expansion-panel class="mb-2 p-1" (opened)="item.isPanelOpen = true" (closed)="item.isPanelOpen = false">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title class="text-dark">
+                                    {{ item.ques }}
+                                </mat-panel-title>
+                            </mat-expansion-panel-header>
+                            <p class="text-dark">{{ item.ans }}</p>
+                        </mat-expansion-panel>
+                    </ng-container>
+                  </mat-accordion>
+            </div>
         </div>
-        <div class="text-white f-s-16 l-s-2">
-            Made By In-Source Solutions
-        </div>
-    </div> -->
+    </div>
+</ng-container>
+
+<ng-container>
     <mats-footer></mats-footer>
 </ng-container>
