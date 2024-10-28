@@ -4,12 +4,13 @@ import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 import { ServiceDetailsComponent } from '../service-details/service-details.component';
+import { MatsFooterComponent } from "../mats-footer/mats-footer.component";
 
 @Component({
   selector: 'app-mats-home',
   templateUrl: './mats-home.component.html',
   styleUrl: './mats-home.component.scss',
-  imports: [MaterialModule, CommonModule],
+  imports: [MaterialModule, CommonModule, MatsFooterComponent],
   standalone: true
 })
 export class MatsHomeComponent implements OnInit {
