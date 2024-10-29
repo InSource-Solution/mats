@@ -27,10 +27,11 @@ body {
 }
 
 .heading {
-    font-size: 24px !important;
+    font-size: 25px !important;
     letter-spacing: 1px !important;
     font-weight: 600 !important;
-    line-height: 30px !important;
+    line-height: 30px;
+    text-transform: uppercase !important;
 }
 
 .pointer {
@@ -83,6 +84,10 @@ body {
 
 .txt-red {
     color: rgb(172, 23, 23) !important;
+}
+
+.txt-black {
+    color: black !important;
 }
 
 .l-s-2 {

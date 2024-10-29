@@ -92,6 +92,15 @@ export class MatsHomeComponent implements OnInit {
       ans: 'We can arrange to have your car(s), truck transported with the rest of your belongings; in the trailer or shipped separately on a car carrier. However, we do not transport cars as part of a regular local move.',
     },
   ];
+  customerImgLst = [
+    { src: '../../assets/logo.png' },
+    { src: '../../assets/logo.png' },
+    { src: '../../assets/logo.png' },
+    { src: '../../assets/logo.png' },
+    { src: '../../assets/logo.png' },
+    { src: '../../assets/logo.png' },
+    { src: '../../assets/logo.png' },
+  ]
 
   constructor(private sanitizer: DomSanitizer, private _dialog: MatDialog) {}
 
