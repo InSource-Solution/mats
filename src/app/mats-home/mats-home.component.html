@@ -1,52 +1,87 @@
 <ng-container>
-    <div class="container-fuild bg-white shadow-sm sticky-top">
-        <div class="row w-100 d-flex align-items-center pt-2 pb-2">
-            <div class="col-md-3 text-center">
-                <img src="../../assets/logo.png" alt="MATS" width="155px" height="55px">
-            </div>
-            <div class="col-md-3">
-                <div class="d-flex align-items-center">
-                    <button mat-mini-fab class="background-clr text-white">
-                        <mat-icon>schedule</mat-icon>
-                    </button>
-                    <div class="mx-2">
-                        <p class="m-0 p-0">Open Time</p>
-                        <p class="m-0 p-0">24 Hours</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="d-flex align-items-center">
-                    <button mat-mini-fab class="background-clr text-white" matTooltip="Call Now" (click)="openWhatsapp(923158559450)" 
-                        matTooltipPosition="above">
-                        <mat-icon>phone</mat-icon>
-                    </button>
-                    <div class="mx-2">
-                        <p class="m-0 p-0">Emergency Call</p>
-                        <p class="m-0 p-0">+92 315 8559450</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="d-flex align-items-center">
-                    <button mat-mini-fab class="background-clr text-white" (click)="openWhatsapp(923242887495)" matTooltip="Call On Whatsapp"
-                        matTooltipPosition="above">
-                        <mat-icon>wifi_calling_3</mat-icon>
-                    </button>
-                    <div class="mx-2">
-                        <p class="m-0 p-0">Whatsapp's Call</p>
-                        <p class="m-0 p-0">+92 324 2887495</p>
-                    </div>
-                </div>
-            </div>
+  <div class="container-fuild bg-white shadow-sm sticky-top">
+    <div class="row w-100 d-flex align-items-center pt-2 pb-2">
+      <div class="col-md-3 text-center">
+        <img
+          src="../../assets/logo.png"
+          alt="MATS"
+          width="155px"
+          height="55px"
+        />
+      </div>
+      <div class="col-md-3">
+        <div class="d-flex align-items-center">
+          <button mat-mini-fab class="background-clr text-white">
+            <mat-icon>schedule</mat-icon>
+          </button>
+          <div class="mx-2">
+            <p class="m-0 p-0 f-w-b txt-clr">Open Time</p>
+            <p class="m-0 p-0">24 Hours</p>
+          </div>
         </div>
+      </div>
+      <div class="col-md-3">
+        <div class="d-flex align-items-center">
+          <button
+            mat-mini-fab
+            class="background-clr text-white"
+            matTooltip="Call Us Now"
+            matTooltipPosition="above"
+          >
+            <mat-icon>phone</mat-icon>
+          </button>
+          <div class="mx-2">
+            <p class="m-0 p-0 f-w-b txt-clr">Call Us Now</p>
+            <span
+              class="pointer"
+              matTooltip="Route to Whatsapp"
+              (click)="openWhatsapp(923242887495)"
+              >+92 324 2887495 |
+            </span>
+            <span
+              class="pointer"
+              matTooltip="Route to Whatsapp"
+              (click)="openWhatsapp(923158559450)"
+              >+92 315 8559450</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="d-flex align-items-center">
+          <button
+            mat-mini-fab
+            class="background-clr text-white"
+            matTooltip="Call On Whatsapp"
+            matTooltipPosition="above"
+          >
+            <mat-icon>wifi_calling_3</mat-icon>
+          </button>
+          <div class="mx-2">
+            <p class="m-0 p-0 f-w-b txt-clr">Whatsapp's Call</p>
+            <span
+              class="pointer"
+              matTooltip="Route to Whatsapp"
+              (click)="openWhatsapp(923242887495)"
+              >+92 324 2887495 |
+            </span>
+            <span
+              class="pointer"
+              matTooltip="Route to Whatsapp"
+              (click)="openWhatsapp(923158559450)"
+              >+92 315 8559450</span
+            >
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </ng-container>
 
 <ng-container>
-    <div class="w-100">
-        <img src="../../assets/Home-Bannar.jpg" width="100%">
-    </div>
+  <div class="w-100">
+    <img src="../../assets/Home-Bannar.jpg" width="100%" />
+  </div>
 </ng-container>
 
 <!-- <ng-container>
@@ -56,7 +91,7 @@
     </div>
 </ng-container> -->
 
-<ng-container>
+<!-- <ng-container>
     <div class="container mt-4 mb-4">
         <div class="">
             <p class="m-0 heading txt-clr">WHAT WE OFFER</p>
@@ -72,233 +107,337 @@
             </div>
         </div>
     </div>
-</ng-container>
+</ng-container> -->
 
 <ng-container>
-    <div class="container mt-5">
-        <p class="txt-clr heading mb-0">ABOUT US</p>
-        <mat-progress-bar class="w-15" mode="buffer" color="txt-clr"></mat-progress-bar>
+  <div class="container mt-5">
+    <p class="txt-clr heading mb-0">ABOUT US</p>
+    <mat-progress-bar
+      class="w-15"
+      mode="buffer"
+      color="txt-clr"
+    ></mat-progress-bar>
 
-        <div class="pt-3">
-            <p class="">
-                Mats Towing &amp; Transport is one the leading international Transport, relocation and logistics
-                management company delivering cost-saving solutions Around the World.<br><br>
+    <div class="pt-3">
+      <p class="">
+        Mats Towing &amp; Transport is one the leading international Transport,
+        relocation and logistics management company delivering cost-saving
+        solutions Around the World.<br /><br />
 
-                Mats evolve comprehensive Transport, logistics and relocation service plans tailored to meet exact
-                requirements of customers. This is expert by learning customers’ exact objectives with regards to their
-                internal and external needs, thus make sure that Mats will provide comprehensive services more
-                consistently than any other service provider in the market.<br><br>
+        Mats evolve comprehensive Transport, logistics and relocation service
+        plans tailored to meet exact requirements of customers. This is expert
+        by learning customers’ exact objectives with regards to their internal
+        and external needs, thus make sure that Mats will provide comprehensive
+        services more consistently than any other service provider in the
+        market.<br /><br />
 
-                Our well proven multimodal transportation System to the Entire World ensures international reach
-                whatever your cargo and time-frame is. As the preferred Logistics Partner for various companies and the
-                first point of contact to increase supply chain productivity in the Global Market, we are very proud for
-                our reputation and always struggle to maintain it.<br><br>
+        Our well proven multimodal transportation System to the Entire World
+        ensures international reach whatever your cargo and time-frame is. As
+        the preferred Logistics Partner for various companies and the first
+        point of contact to increase supply chain productivity in the Global
+        Market, we are very proud for our reputation and always struggle to
+        maintain it.<br /><br />
 
-                We treat clients as our highest priority. Our services and solutions are driven for their ultimate
-                benefit. Delivering meaningful, measurable added-value to our customers is an integral part of our
-                culture. With our innovative solutions, we can help you to plan for business strategies, improve
-                customer service, accelerate order cycle times, and tightened control of the supply chain.<br><br>
+        We treat clients as our highest priority. Our services and solutions are
+        driven for their ultimate benefit. Delivering meaningful, measurable
+        added-value to our customers is an integral part of our culture. With
+        our innovative solutions, we can help you to plan for business
+        strategies, improve customer service, accelerate order cycle times, and
+        tightened control of the supply chain.<br /><br />
 
-                For Further detail Please Do contact With Us <span class="txt-clr">MATSOFFICAL9&#64;GMAIL.COM</span>
-            </p>
-        </div>
-
-        <div class="pt-3">
-            <mat-stepper class="bg-white overwrite-stepper">
-                <mat-step label="OUR LEADERSHIP" state="chat" class="stepLabel">
-                    <p class="">Underpin by our own offices and associates worldwide, Costa Logistics employs a team of
-                        professionals that follow up and follows through on each and every business we manage. With our
-                        Worldwide Service Network across 65 countries, we focus to be the most reliable Freight
-                        Forwarding, Removals and Relocation and Logistics Company in the market with an wonderful,
-                        people-driven and committed approach to serving our valued customers.<br>
-                        While we are skilled in offering worldwide moving, freight forwarding, logistics related
-                        services, we are not to be satisfied with only that: we also undertake to be committed advisors
-                        to our valued customers at all times.
-                    </p>
-                </mat-step>
-                <mat-step label="PROJECT HANDLING" state="chat" class="stepLabel">
-                    <p class="">Underpin by our own offices and associates worldwide, Costa Logistics employs a team of
-                        professionals that follow up and follows through on each and every business we manage. With our
-                        Worldwide Service Network across 65 countries, we focus to be the most reliable Freight
-                        Forwarding, Removals and Relocation and Logistics Company in the market with an wonderful,
-                        people-driven and committed approach to serving our valued customers.<br>
-                        While we are skilled in offering worldwide moving, freight forwarding, logistics related
-                        services, we are not to be satisfied with only that: we also undertake to be committed advisors
-                        to our valued customers at all times.
-                    </p>
-                </mat-step>
-                <mat-step label="WHY US ?" state="chat" class="">
-                    <p class="">Underpin by our own offices and associates worldwide, Costa Logistics employs a team of
-                        professionals that follow up and follows through on each and every business we manage. With our
-                        Worldwide Service Network across 65 countries, we focus to be the most reliable Freight
-                        Forwarding, Removals and Relocation and Logistics Company in the market with an wonderful,
-                        people-driven and committed approach to serving our valued customers.<br>
-                        While we are skilled in offering worldwide moving, freight forwarding, logistics related
-                        services, we are not to be satisfied with only that: we also undertake to be committed advisors
-                        to our valued customers at all times.
-                    </p>
-                </mat-step>
-                <ng-template matStepperIcon="chat">
-                    <mat-icon>forum</mat-icon>
-                </ng-template>
-            </mat-stepper>
-        </div>
+        For Further detail Please Do contact With Us
+        <span class="txt-clr">MATSOFFICAL9&#64;GMAIL.COM</span>
+      </p>
     </div>
-</ng-container>
 
-<ng-container>
-    <div class="container mt-4">
-        <div class="">
-            <p class="txt-clr heading mb-0">OUR SERVICE'S</p>
-            <mat-progress-bar class="w-18" mode="buffer" color="txt-clr"></mat-progress-bar>
-        </div>
-        <div class="row mt-4">
-            <div class="col-md-4 mt-2" *ngFor="let _service of serviceData">
-                <mat-card class="shadow-lg light-border-color service-card pointer">
-                    <div class="d-flex align-items-center">
-                        <div class="w-30">
-                            <img [src]="_service.cardSrc" class="service-card-img" width="100%" height="100px">
-                        </div>
-                        <div class="w-70 px-3">
-                            <p class="mb-1 service-card-heading">{{ _service.title }}</p>
-                            <p class="mb-1 f-s-11"> {{ _service.infoText }}</p>
-                            <span class="service-card-more" (click)="onOpenDetail(_service)"> More Detail </span>
-                        </div>
-                    </div>
-                </mat-card>
-            </div>
-        </div>
+    <div class="pt-3">
+      <mat-stepper class="bg-white overwrite-stepper">
+        <mat-step label="OUR LEADERSHIP" state="chat" class="stepLabel">
+          <p class="">
+            Underpin by our own offices and associates worldwide, Costa
+            Logistics employs a team of professionals that follow up and follows
+            through on each and every business we manage. With our Worldwide
+            Service Network across 65 countries, we focus to be the most
+            reliable Freight Forwarding, Removals and Relocation and Logistics
+            Company in the market with an wonderful, people-driven and committed
+            approach to serving our valued customers.<br />
+            While we are skilled in offering worldwide moving, freight
+            forwarding, logistics related services, we are not to be satisfied
+            with only that: we also undertake to be committed advisors to our
+            valued customers at all times.
+          </p>
+        </mat-step>
+        <mat-step label="PROJECT HANDLING" state="chat" class="stepLabel">
+          <p class="">
+            Underpin by our own offices and associates worldwide, Costa
+            Logistics employs a team of professionals that follow up and follows
+            through on each and every business we manage. With our Worldwide
+            Service Network across 65 countries, we focus to be the most
+            reliable Freight Forwarding, Removals and Relocation and Logistics
+            Company in the market with an wonderful, people-driven and committed
+            approach to serving our valued customers.<br />
+            While we are skilled in offering worldwide moving, freight
+            forwarding, logistics related services, we are not to be satisfied
+            with only that: we also undertake to be committed advisors to our
+            valued customers at all times.
+          </p>
+        </mat-step>
+        <mat-step label="WHY US ?" state="chat" class="">
+          <p class="">
+            Underpin by our own offices and associates worldwide, Costa
+            Logistics employs a team of professionals that follow up and follows
+            through on each and every business we manage. With our Worldwide
+            Service Network across 65 countries, we focus to be the most
+            reliable Freight Forwarding, Removals and Relocation and Logistics
+            Company in the market with an wonderful, people-driven and committed
+            approach to serving our valued customers.<br />
+            While we are skilled in offering worldwide moving, freight
+            forwarding, logistics related services, we are not to be satisfied
+            with only that: we also undertake to be committed advisors to our
+            valued customers at all times.
+          </p>
+        </mat-step>
+        <ng-template matStepperIcon="chat">
+          <mat-icon>forum</mat-icon>
+        </ng-template>
+      </mat-stepper>
     </div>
+  </div>
 </ng-container>
 
 <ng-container>
-    <div class="container mt-5">
-        <div class="row d-flex align-items-center">
-            <div class="col-md-6">
-                <img src="../../assets/provide.jpeg" width="100%" height="350px" class="b-r-5">
-            </div>
-            <div class="col-md-6">
-                <p class="text-center heading l-s-2 txt-clr">Our Mission</p>
-                <p class="pt-2"> At <span class="txt-clr">Mats Towing &amp; Transport</span>, our objective is to offer commuters in the UAE and the GCC top-notch, dependable,
-                    and stress-free vehicle recovery and roadside assistance services. We endeavor to:
-                    <br><br>
-                    Provide unparalleled repair and towing service that prioritizes the safety and satisfaction of our clients.
-                    Establish enduring relationships with our consumers by consistently surpassing their expectations.
-                    <br><br>
-                    We must adapt and innovate our services to accommodate the evolving requirements of our consumers and the industry.
-                    <br><br>
-                    Maintain the principles of transparency, integrity, and honesty in all facets of our business.
-                    <br><br>
-                </p>
-            </div>
-        </div>
+  <div class="container mt-4">
+    <div class="">
+      <p class="txt-clr heading mb-0">OUR SERVICE'S</p>
+      <mat-progress-bar
+        class="w-18"
+        mode="buffer"
+        color="txt-clr"
+      ></mat-progress-bar>
     </div>
-</ng-container>
-
-<ng-container>
-    <div class="container mt-5">
-        <div class="row d-flex align-items-center">
-            <div class="col-md-6">
-                <p class="text-center heading l-s-2 txt-clr">Our Vision</p>
-                <p class="pt-2"> Our aim is to establish ourselves as the premier provider of 
-                    vehicle recovery services and roadside assistance in the United Arab Emirates and the broader Gulf Cooperation Council (GCC). Our objective is to:
-                    <br><br>
-                    Establish the industry’s benchmark for excellence by providing unparalleled customer service and quality.
-                    <br><br>
-                    Encourage an environment of perpetual development, in which innovation is the driving force behind our success 
-                    and enables us to maintain our position at the vanguard of the industry.
-                    <br><br>
-                    Ensure that we are the preferred option for vehicles in need of assistance, regardless of their location, by broadening our reach and capabilities.
-                    <br><br>
-                </p>
+    <div class="services-section row mt-4">
+      <div
+        class="mt-2 col-md-4"
+        *ngFor="let _service of serviceData"
+        [class.flipped]="_service.isFlipped"
+      >
+        <mat-card class="pointer mat-card shadow-lg light-border-color service-card" (click)="flipCard(_service)">
+          <div class="mat-card-front">
+            <div  *ngIf="!_service.isFlipped" class="w-70 px-3">
+              <p class="mb-1 service-card-heading">{{ _service.title }}</p>
+              <p class="mb-1 f-s-11">{{ _service.infoText }}</p>
+              <span class="service-card-more" (click)="onOpenDetail(_service)">
+                More Detail
+              </span>
             </div>
-            <div class="col-md-6">
-                <img src="../../assets/sport.jpeg" width="100%" height="350px" class="b-r-5">
+          </div>
+          <div *ngIf="_service.isFlipped" class="mat-card-back">
+            <div class="w-70 px-3">
+              <p class="mb-1 service-card-heading">{{ _service.subTitle }}</p>
+              <p class="mb-1 f-s-11">{{ _service.desc }}</p>
+              <span class="service-card-more" (click)="onOpenDetail(_service)">
+                More Detail
+              </span>
             </div>
-        </div>
+          </div>
+        </mat-card>
+      </div>
     </div>
+  </div>
 </ng-container>
 
 <ng-container>
-    <div class="container mt-5">
-        <div class="">
-            <p class="txt-clr heading mb-0">CONTACT US / LOCATION</p>
-            <mat-progress-bar class="w-30" mode="buffer" color="txt-clr"></mat-progress-bar>
-        </div>
-        <div class="row mt-3">
-            <div class="col-md-6 mb-5">
-                <mat-card class="contact p-3 shadow-lg light-border-color">
-                    <p class="text-white heading text-center pt-3 pb-4">CONTACT US</p>
-
-                    <form class="w-100">
-                        <mat-form-field class="w-100 form-input">
-                            <mat-label class="text-white">Name</mat-label>
-                            <input matInput placeholder="Write Your Name..." class="text-white"
-                                [(ngModel)]="userModel.name" [ngModelOptions]="{standalone: true}">
-                        </mat-form-field>
-
-                        <mat-form-field class="w-100 form-input">
-                            <mat-label class="text-white">Email</mat-label>
-                            <input matInput placeholder="Write Your Email..." class="text-white"
-                                [(ngModel)]="userModel.email" [ngModelOptions]="{standalone: true}"
-                                (change)="onEmailChange()">
-                            <span class="text-danger f-s-12" *ngIf="userModel.isError">Please enter a valid email
-                                address</span>
-                        </mat-form-field>
-
-                        <mat-form-field class="w-100 form-input">
-                            <mat-label class="text-white" class="text-white">Phone</mat-label>
-                            <input matInput placeholder="Write Your Phone..." [(ngModel)]="userModel.phone"
-                                [ngModelOptions]="{standalone: true}">
-                        </mat-form-field>
-
-                        <mat-form-field class="w-100 form-input">
-                            <mat-label class="text-white" class="text-white">Message</mat-label>
-                            <textarea matInput placeholder="Message....." [(ngModel)]="userModel.message"
-                                [ngModelOptions]="{standalone: true}"></textarea>
-                        </mat-form-field>
-
-                        <div class="d-flex justify-content-center">
-                            <button mat-raised-button class="background-clr text-white f-w-b">Submit</button>
-                        </div>
-                    </form>
-                </mat-card>
-            </div>
-            <div class="col-md-6">
-                <mat-card class="location p-3 shadow-lg light-border-color">
-                    <p class="text-white heading text-center pt-3 pb-4">LOCATION</p>
-                    <iframe width="100%" height="374px" [src]="iframeSrc" frameborder="0" allowfullscreen></iframe>
-                </mat-card>
-            </div>
-        </div>
+  <div class="container mt-5">
+    <div class="row d-flex align-items-center">
+      <div class="col-md-6">
+        <img
+          src="../../assets/provide.jpeg"
+          width="100%"
+          height="350px"
+          class="b-r-5"
+        />
+      </div>
+      <div class="col-md-6">
+        <p class="text-center heading l-s-2 txt-clr">Our Mission</p>
+        <p class="pt-2">
+          At <span class="txt-clr">Mats Towing &amp; Transport</span>, our
+          objective is to offer commuters in the UAE and the GCC top-notch,
+          dependable, and stress-free vehicle recovery and roadside assistance
+          services. We endeavor to: <br /><br />
+          Provide unparalleled repair and towing service that prioritizes the
+          safety and satisfaction of our clients. Establish enduring
+          relationships with our consumers by consistently surpassing their
+          expectations.
+          <br /><br />
+          We must adapt and innovate our services to accommodate the evolving
+          requirements of our consumers and the industry.
+          <br /><br />
+          Maintain the principles of transparency, integrity, and honesty in all
+          facets of our business.
+          <br /><br />
+        </p>
+      </div>
     </div>
+  </div>
 </ng-container>
 
 <ng-container>
-    <div class="container mt-4 mb-3">
-        <div class="row d-flex align-items-center">
-            <div class="col-md-6">
-                <p class="heading txt-clr">Frequently Asked Question (FAQ's)</p>
-                <p>Have questions about our services? We’ve compiled a list of common inquiries to help you find the information you need quickly. If you don’t see your question here, feel free to reach out to our customer support team for further assistance!</p>
-            </div>
-            <div class="col-md-6">
-                <mat-accordion class="panel">
-                    <ng-container *ngFor="let item of faqData">
-                        <mat-expansion-panel class="mb-2 p-1" (opened)="item.isPanelOpen = true" (closed)="item.isPanelOpen = false">
-                            <mat-expansion-panel-header>
-                                <mat-panel-title class="text-dark">
-                                    {{ item.ques }}
-                                </mat-panel-title>
-                            </mat-expansion-panel-header>
-                            <p class="text-dark">{{ item.ans }}</p>
-                        </mat-expansion-panel>
-                    </ng-container>
-                  </mat-accordion>
-            </div>
-        </div>
+  <div class="container mt-5">
+    <div class="row d-flex align-items-center">
+      <div class="col-md-6">
+        <p class="text-center heading l-s-2 txt-clr">Our Vision</p>
+        <p class="pt-2">
+          Our aim is to establish ourselves as the premier provider of vehicle
+          recovery services and roadside assistance in the United Arab Emirates
+          and the broader Gulf Cooperation Council (GCC). Our objective is to:
+          <br /><br />
+          Establish the industry’s benchmark for excellence by providing
+          unparalleled customer service and quality.
+          <br /><br />
+          Encourage an environment of perpetual development, in which innovation
+          is the driving force behind our success and enables us to maintain our
+          position at the vanguard of the industry.
+          <br /><br />
+          Ensure that we are the preferred option for vehicles in need of
+          assistance, regardless of their location, by broadening our reach and
+          capabilities.
+          <br /><br />
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img
+          src="../../assets/sport.jpeg"
+          width="100%"
+          height="350px"
+          class="b-r-5"
+        />
+      </div>
     </div>
+  </div>
 </ng-container>
 
 <ng-container>
-    <mats-footer></mats-footer>
+  <div class="container mt-5">
+    <div class="">
+      <p class="txt-clr heading mb-0">CONTACT US / LOCATION</p>
+      <mat-progress-bar
+        class="w-30"
+        mode="buffer"
+        color="txt-clr"
+      ></mat-progress-bar>
+    </div>
+    <div class="row mt-3">
+      <div class="col-md-6 mb-5">
+        <mat-card class="contact p-3 shadow-lg light-border-color">
+          <p class="text-white heading text-center pt-3 pb-4">CONTACT US</p>
+
+          <form class="w-100">
+            <mat-form-field class="w-100 form-input">
+              <mat-label class="text-white">Name</mat-label>
+              <input
+                matInput
+                placeholder="Write Your Name..."
+                class="text-white"
+                [(ngModel)]="userModel.name"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </mat-form-field>
+
+            <mat-form-field class="w-100 form-input">
+              <mat-label class="text-white">Email</mat-label>
+              <input
+                matInput
+                placeholder="Write Your Email..."
+                class="text-white"
+                [(ngModel)]="userModel.email"
+                [ngModelOptions]="{ standalone: true }"
+                (change)="onEmailChange()"
+              />
+              <span class="text-danger f-s-12" *ngIf="userModel.isError"
+                >Please enter a valid email address</span
+              >
+            </mat-form-field>
+
+            <mat-form-field class="w-100 form-input">
+              <mat-label class="text-white" class="text-white">Phone</mat-label>
+              <input
+                matInput
+                placeholder="Write Your Phone..."
+                [(ngModel)]="userModel.phone"
+                [ngModelOptions]="{ standalone: true }"
+              />
+            </mat-form-field>
+
+            <mat-form-field class="w-100 form-input">
+              <mat-label class="text-white" class="text-white"
+                >Message</mat-label
+              >
+              <textarea
+                matInput
+                placeholder="Message....."
+                [(ngModel)]="userModel.message"
+                [ngModelOptions]="{ standalone: true }"
+              ></textarea>
+            </mat-form-field>
+
+            <div class="d-flex justify-content-center">
+              <button mat-raised-button class="background-clr text-white f-w-b">
+                Submit
+              </button>
+            </div>
+          </form>
+        </mat-card>
+      </div>
+      <div class="col-md-6">
+        <mat-card class="location p-3 shadow-lg light-border-color">
+          <p class="text-white heading text-center pt-3 pb-4">LOCATION</p>
+          <iframe
+            width="100%"
+            height="374px"
+            [src]="iframeSrc"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container>
+  <div class="container mt-4 mb-3">
+    <div class="row d-flex align-items-center">
+      <div class="col-md-6">
+        <p class="heading txt-clr">Frequently Asked Question (FAQ's)</p>
+        <p>
+          Have questions about our services? We’ve compiled a list of common
+          inquiries to help you find the information you need quickly. If you
+          don’t see your question here, feel free to reach out to our customer
+          support team for further assistance!
+        </p>
+      </div>
+      <div class="col-md-6">
+        <mat-accordion class="panel">
+          <ng-container *ngFor="let item of faqData">
+            <mat-expansion-panel
+              class="mb-2 p-1"
+              (opened)="item.isPanelOpen = true"
+              (closed)="item.isPanelOpen = false"
+            >
+              <mat-expansion-panel-header>
+                <mat-panel-title class="text-dark">
+                  {{ item.ques }}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p class="text-dark">{{ item.ans }}</p>
+            </mat-expansion-panel>
+          </ng-container>
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container>
+  <mats-footer></mats-footer>
 </ng-container>
