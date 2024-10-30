@@ -2,7 +2,7 @@
     <div class="container-fuild bg-white shadow-sm sticky-top">
         <div class="row w-100 d-flex align-items-center pt-2 pb-2">
             <div class="col-md-3 text-center">
-                <img src="../../assets/logo.png" alt="MATS" width="155px" height="55px">
+                <img src="../../assets/logo.png" alt="MATS" width="155px" height="55px" />
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center">
@@ -10,32 +10,40 @@
                         <mat-icon>schedule</mat-icon>
                     </button>
                     <div class="mx-2">
-                        <p class="m-0 p-0">Open Time</p>
+                        <p class="m-0 p-0 f-w-600 txt-clr l-s-2">Open Time</p>
                         <p class="m-0 p-0">24 Hours</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center">
-                    <button mat-mini-fab class="background-clr text-white" matTooltip="Call Now" (click)="openWhatsapp(923158559450)" 
-                        matTooltipPosition="above">
+                    <button mat-mini-fab class="background-clr text-white" matTooltip="Call Us Now"
+                        matTooltipPosition="above" (click)="openWhatsapp(923242887495)">
                         <mat-icon>phone</mat-icon>
                     </button>
                     <div class="mx-2">
-                        <p class="m-0 p-0">Emergency Call</p>
-                        <p class="m-0 p-0">+92 315 8559450</p>
+                        <p class="m-0 p-0 f-w-600 txt-clr l-s-2">Call Us Now</p>
+                        <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923242887495)">+92 324
+                            2887495 |
+                        </span>
+                        <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923158559450)">+92 315
+                            8559450</span>
                     </div>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="d-flex align-items-center">
-                    <button mat-mini-fab class="background-clr text-white" (click)="openWhatsapp(923242887495)" matTooltip="Call On Whatsapp"
-                        matTooltipPosition="above">
+                    <button mat-mini-fab class="background-clr text-white" matTooltip="Call On Whatsapp"
+                        matTooltipPosition="above" (click)="openWhatsapp(923158559450)">
                         <mat-icon>wifi_calling_3</mat-icon>
                     </button>
                     <div class="mx-2">
-                        <p class="m-0 p-0">Whatsapp's Call</p>
-                        <p class="m-0 p-0">+92 324 2887495</p>
+                        <p class="m-0 p-0 f-w-600 txt-clr l-s-2">Whatsapp's Call</p>
+                        <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923242887495)">+92 324
+                            2887495 |
+                        </span>
+                        <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923158559450)">+92 315
+                            8559450</span>
                     </div>
                 </div>
             </div>
@@ -45,40 +53,48 @@
 
 <ng-container>
     <div class="w-100">
-        <img src="../../assets/Home-Bannar.jpg" width="100%">
+        <img src="../../assets/Home-Bannar.jpg" width="100%" />
     </div>
 </ng-container>
 
-<!-- <ng-container>
-    <div class="container text-center mt-4 mb-4">
-        <p class="txt-clr heading"> ROADSIDE ASSISTANCE, <br> WHEN YOU NEED IT THE MOST THE HIGHEST QUALITY <br> TOWING
-            SERVICES</p>
-    </div>
-</ng-container> -->
-
-<!-- <ng-container>
-    <div class="container mt-4 mb-4">
+<ng-container>
+    <div class="container mt-5 mb-5">
         <div class="">
-            <p class="m-0 heading txt-clr">WHAT WE OFFER</p>
-            <mat-progress-bar class="w-20" mode="buffer" color="txt-clr"></mat-progress-bar>
+            <p class="txt-clr heading mb-0">Our Service's</p>
         </div>
-        <div class="mt-3">
-            <p class="f-s-18">EFFECTIVE FLATBED TRANSPORTATION</p>
-            <p class="">We provide fast, courteous and inexpensive towing services in Pakistan. We are ready to
-                respond to all your vehicle emergency needs 24 hours a day, seven days a week.</p>
-            <div class="d-flex align-items-center" *ngFor="let offer of offersData">
-                <mat-icon class="txt-clr mx-3">{{offer.icon}}</mat-icon>
-                <span class="">{{offer.desc}}</span>
+        <div class="services-section row mt-3">
+            <div class="mt-2 col-md-4" *ngFor="let _service of serviceData" [class.flipped]="_service.isFlipped">
+                <mat-card class="pointer mat-card shadow service-card">
+                    <div [ngClass]="_service.isFlipped ? 'mat-card-back' : 'mat-card-front'">
+                        <div class="w-100 px-2">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="mb-1 service-card-heading">{{ _service.isFlipped ? _service.subTitle : _service.title }}</p>
+                                <mat-icon (click)="flipCard(_service)" [matTooltip]="_service.toolTip"
+                                    class="txt-red f-s-20 f-w-b">flip_camera_android</mat-icon>
+                            </div>
+                            <p class="mb-1 f-s-11">{{ _service.isFlipped ? _service.desc : _service.infoText }}</p>
+                        </div>
+                    </div>
+                </mat-card>
             </div>
         </div>
     </div>
-</ng-container> -->
+</ng-container>
+
+<ng-container>
+    <div class="container mt-5 mb-5">
+        <p class="txt-clr heading"> Our Customer's </p>
+        <div class="row mt-3">
+            <div class="col-md-2 mt-1" *ngFor="let item of customerImgLst">
+                <img [src]="item.src" width="100%" class="shadow-sm">
+            </div>
+        </div>
+    </div>
+</ng-container>
 
 <ng-container>
     <div class="container mt-5">
         <p class="txt-clr heading mb-0">ABOUT US</p>
-        <mat-progress-bar class="w-15" mode="buffer" color="txt-clr"></mat-progress-bar>
-
         <div class="pt-3">
             <p class="">
                 Mats Towing &amp; Transport is one the leading international Transport, relocation and logistics
@@ -90,7 +106,7 @@
                 consistently than any other service provider in the market.<br><br>
 
                 Our well proven multimodal transportation System to the Entire World ensures international reach
-                whatever your cargo and timeframe is. As the preferred Logistics Partner for various companies and the
+                whatever your cargo and time-frame is. As the preferred Logistics Partner for various companies and the
                 first point of contact to increase supply chain productivity in the Global Market, we are very proud for
                 our reputation and always struggle to maintain it.<br><br>
 
@@ -147,84 +163,28 @@
 </ng-container>
 
 <ng-container>
-    <div class="container mt-4">
+    <div class="container mt-3">
         <div class="">
-            <p class="txt-clr heading mb-0">OUR SERVICE'S</p>
-            <mat-progress-bar class="w-18" mode="buffer" color="txt-clr"></mat-progress-bar>
+            <p class="txt-clr heading mb-0">LOCATION</p>
         </div>
-        <div class="row mt-4">
-            <div class="col-md-4 mt-2" *ngFor="let _service of serviceData">
-                <mat-card class="shadow-lg light-border-color service-card pointer">
-                    <div class="d-flex align-items-center">
-                        <div class="w-30">
-                            <img [src]="_service.cardSrc" class="service-card-img" width="100%" height="100px">
-                        </div>
-                        <div class="w-70 px-3">
-                            <p class="mb-1 service-card-heading">{{ _service.title }}</p>
-                            <p class="mb-1 f-s-11"> {{ _service.infoText }}</p>
-                            <span class="service-card-more" (click)="onOpenDetail(_service)"> More Detail </span>
-                        </div>
-                    </div>
-                </mat-card>
-            </div>
+        <div class="row mt-3">
+            <mat-card class="location shadow p-0">
+                <iframe width="100%" height="374px" [src]="iframeSrc" frameborder="0" allowfullscreen></iframe>
+            </mat-card>
         </div>
     </div>
 </ng-container>
-
-<!-- <ng-container>
-    <div class="container mt-5">
-        <div class="row d-flex align-items-center">
-            <div class="col-md-6">
-                <img src="../../assets/provide.jpeg" width="100%" height="350px" class="b-r-5">
-            </div>
-            <div class="col-md-6">
-                <p class="text-center heading l-s-2 txt-clr">Our Mission</p>
-                <p class="pt-2"> At <span class="txt-clr">Mats Towing &amp; Transport</span>, our objective is to offer commuters in the UAE and the GCC top-notch, dependable,
-                    and stress-free vehicle recovery and roadside assistance services. We endeavor to:
-                    <br><br>
-                    Provide unparalleled repair and towing service that prioritizes the safety and satisfaction of our clients.
-                    Establish enduring relationships with our consumers by consistently surpassing their expectations.
-                    <br><br>
-                    We must adapt and innovate our services to accommodate the evolving requirements of our consumers and the industry.
-                    <br><br>
-                    Maintain the principles of transparency, integrity, and honesty in all facets of our business.
-                    <br><br>
-                </p>
-            </div>
-        </div>
-    </div>
-</ng-container>
-
-<ng-container>
-    <div class="container mt-5">
-        <div class="row d-flex align-items-center">
-            <div class="col-md-6">
-                <p class="text-center heading l-s-2 txt-clr">Our Vision</p>
-                <p class="pt-2"> Our aim is to establish ourselves as the premier provider of 
-                    vehicle recovery services and roadside assistance in the United Arab Emirates and the broader Gulf Cooperation Council (GCC). Our objective is to:
-                    <br><br>
-                    Establish the industry’s benchmark for excellence by providing unparalleled customer service and quality.
-                    <br><br>
-                    Encourage an environment of perpetual development, in which innovation is the driving force behind our success 
-                    and enables us to maintain our position at the vanguard of the industry.
-                    <br><br>
-                    Ensure that we are the preferred option for vehicles in need of assistance, regardless of their location, by broadening our reach and capabilities.
-                    <br><br>
-                </p>
-            </div>
-            <div class="col-md-6">
-                <img src="../../assets/sport.jpeg" width="100%" height="350px" class="b-r-5">
-            </div>
-        </div>
-    </div>
-</ng-container> -->
 
 <ng-container>
     <div class="container mt-5">
         <div class="row d-flex align-items-center">
             <div class="col-md-7">
                 <p class="heading txt-clr">Contact Us</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, maiores officia. Eligendi odit totam debitis recusandae adipisci harum explicabo, maxime eos fugit temporibus inventore, molestiae quasi labore!</p>
+                <p>If you have any questions, feedback, or need assistance, <span class="txt-clr "> MATS Towing & Transport </span> is here to help!
+                     Our dedicated team is committed to providing you with prompt and friendly support. Whether you’re seeking information about our services,
+                      need technical assistance, or want to share your thoughts, we encourage you to reach out. You can contact us via email, phone, or our online contact form,
+                       and we’ll do our best to respond as quickly as possible. Your satisfaction is our priority, and we value your input.
+                     Thank you for choosing <span class="txt-clr "> MATS Towing & Transport </span> we look forward to connecting with you soon!</p>
             </div>
             <div class="col-md-5">
                 <mat-card class="p-4 shadow contact">
@@ -267,29 +227,19 @@
 </ng-container>
 
 <ng-container>
-    <div class="container mt-5">
-        <div class="">
-            <p class="txt-clr heading mb-0">LOCATION</p>
-        </div>
-        <div class="row mt-3">
-            <mat-card class="location shadow p-0">
-                <iframe width="100%" height="374px" [src]="iframeSrc" frameborder="0" allowfullscreen></iframe>
-            </mat-card>
-        </div>
-    </div>
-</ng-container>
-
-<ng-container>
     <div class="container mt-5 mb-5">
         <div class="row d-flex align-items-center">
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <p class="heading txt-clr">Frequently Asked Question (FAQ's)</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, maiores officia. Eligendi odit totam debitis recusandae adipisci harum explicabo, maxime eos fugit temporibus inventore, molestiae quasi labore!</p>
+                <p>Have questions about our services? We’ve compiled a list of common inquiries to help you find the
+                    information you need quickly. If you don’t see your question here, feel free to reach out to our
+                    customer support team for further assistance!</p>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <mat-accordion class="panel">
                     <ng-container *ngFor="let item of faqData">
-                        <mat-expansion-panel class="mb-2 p-1" (opened)="item.isPanelOpen = true" (closed)="item.isPanelOpen = false">
+                        <mat-expansion-panel class="mb-2 p-1" (opened)="item.isPanelOpen = true"
+                            (closed)="item.isPanelOpen = false">
                             <mat-expansion-panel-header>
                                 <mat-panel-title class="text-dark">
                                     {{ item.ques }}
@@ -298,18 +248,7 @@
                             <p class="text-dark">{{ item.ans }}</p>
                         </mat-expansion-panel>
                     </ng-container>
-                  </mat-accordion>
-            </div>
-        </div>
-    </div>
-</ng-container>
-
-<ng-container>
-    <div class="container mt-5 mb-5">
-        <p class="txt-clr text-center heading"> Customer's </p>
-        <div class="row">
-            <div class="col-md-2 mt-1" *ngFor="let item of customerImgLst">
-                <img [src]="item.src" width="100%" class="light-border-color shadow-sm b-r-5">
+                </mat-accordion>
             </div>
         </div>
     </div>

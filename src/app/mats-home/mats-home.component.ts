@@ -1,11 +1,9 @@
-import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MaterialModule } from '../material.module';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
-import { ServiceDetailsComponent } from '../service-details/service-details.component';
+import { MatDialog } from '@angular/material/dialog';
 import { MatsFooterComponent } from '../mats-footer/mats-footer.component';
-import { getMatIconFailedToSanitizeLiteralError } from '@angular/material/icon';
 
 @Component({
   selector: 'app-mats-home',
@@ -17,45 +15,22 @@ import { getMatIconFailedToSanitizeLiteralError } from '@angular/material/icon';
 export class MatsHomeComponent implements OnInit {
   userModel: any = {};
   iframeSrc: SafeResourceUrl | undefined;
-  offersData = [
-    { icon: 'done_all', desc: 'MORE THAN 10 YEARS OF EXPERIENCE' },
-    { icon: 'done_all', desc: 'SHORT ARRIVAL TIME OF 20 MINUTES OR LESS' },
-    { icon: 'done_all', desc: 'HONEST COMPETITIVE PRICES - ZERO HIDDEN FEES' },
-    { icon: 'done_all', desc: 'FRIENDLY AND PROFESSIONAL SERVICE' },
-    { icon: 'done_all', desc: 'AVAILABLE 24 HOURS A DAY, 7 DAYS A WEEK' },
-    {
-      icon: 'done_all',
-      desc: 'PACKAGING AND STORAGE, OR DOOR-TO-DOOR DELIVERY',
-    },
-  ];
   serviceData = [
     {
       title: 'Car Carrier',
       isFlipped: false,
       subTitle: "Car Carrier Detail's",
       toolTip: "Open Car Carrier Detail's",
-      infoText:
-        'We at MATS provide the best Car & Motorcycle Towing services to our clients.',
-      cardSrc: '../../assets/contact-us.jpeg',
-      imgs: [
-        { src: '../../assets/car.jpeg' },
-        { src: '../../assets/car.jpeg' },
-        { src: '../../assets/car.jpeg' },
-        { src: '../../assets/car.jpeg' },
-        { src: '../../assets/car.jpeg' },
-        { src: '../../assets/car.jpeg' },
-      ],
+      infoText: 'We at MATS provide the best Car & Motorcycle Towing services to our clients.',
       desc: 'Ship your car between Lahore, Karachi, Faisalabad,Peshawar and Islamabad at market competitive rates through our wide network of trusted partners.',
     },
     {
-      title: 'PREMIUM TOWING SERVICE',
+      title: 'Premium Towing Service',
       isFlipped:  false,
-      subTitle: "PREMIUM TOWING Detail's",
-      toolTip: "Open PREMIUM TOWING Detail's",
+      subTitle: "Premium Towing Detail's",
+      toolTip: "Open Premium Towing Detail's",
       infoText: 'Smooth, Safe, and Reliable Vehicle Towing with MATS',
-      cardSrc: '../../assets/location.jpeg',
       desc: "Specialized 20Ft Containerized Towing Service to move your Premium SUV's and Sports Cars with full safety between Lahore, Karachi and Islamabad.",
-      // desc: 'MATS makes vehicle transport straightforward and dependable. Our dedicated team ensures your car, truck, or van arrives safely, whether you choose Door-to-Door or Terminal-to-Terminal service. With comprehensive coverage across Pakistan, we’re committed to delivering a hassle-free experience every time.',
     },
     {
       title: 'Tow Truck',
@@ -63,12 +38,8 @@ export class MatsHomeComponent implements OnInit {
       subTitle: "Tow Truck Detail's",
       toolTip: "Open Tow Truck Detail's",
       infoText: 'Fast Jump Start Service - Get Moving with MATS',
-      cardSrc: '../../assets/location.jpeg',
       desc: 'Mobilize a Tow Truck in Lahore, Islamabad and Karachi within minutes to service your broken down vehicle.',
     },
-    // { title: 'Emergency Fuel Delivery', subTitle: "Emergency Fuel Delivery Detail's", toolTip: "Open Emergency Fuel Delivery Detail's", infoText: 'Emergency Fuel Delivery - MATS Keeps You Moving', cardSrc: '../../assets/location.jpeg', desc: 'Stranded with an empty tank? MATS offers rapid, on-demand fuel delivery to get you back on track. Our team brings fuel directly to your location, ensuring a safe and convenient solution for those unexpected moments. Count on us to keep you moving, wherever you are.'},
-    // { title: 'Goods Transportation', subTitle: "Goods Transportation Detail's", toolTip: "Open Goods Transportation Detail's", infoText: 'Seamless Goods Transportation - Trust MATS to Deliver', cardSrc: '../../assets/location.jpeg', desc: 'MATS offers secure and efficient goods transportation across Pakistan. From fragile items to bulk shipments, our experienced team ensures every delivery arrives safely and on time. With flexible service options and end-to-end tracking, MATS is your trusted partner for all freight needs.'},
-    // { title: 'Car Lock Out Services', subTitle: "Car Lock Out Services Detail's", toolTip: "Open Car Lock Out Services Detail's", infoText: 'Swift Car Lockout Services - MATS to the Rescue!', cardSrc: '../../assets/location.jpeg', desc: 'Locked out of your vehicle? Don’t worry! MATS provides fast and reliable car lockout services to get you back inside without the hassle. Our skilled technicians are just a call away, ready to help you regain access to your vehicle safely and efficiently. Trust MATS for quick solutions when you need them most!'},
   ];
   faqData = [
     {
@@ -93,34 +64,26 @@ export class MatsHomeComponent implements OnInit {
     },
   ];
   customerImgLst = [
-    { src: '../../assets/logo.png' },
-    { src: '../../assets/logo.png' },
-    { src: '../../assets/logo.png' },
-    { src: '../../assets/logo.png' },
-    { src: '../../assets/logo.png' },
-    { src: '../../assets/logo.png' },
-    { src: '../../assets/logo.png' },
-  ]
+    { src: '../../assets/customer2.png' },
+    { src: '../../assets/customer1.png' },
+    { src: '../../assets/customer2.png' },
+    { src: '../../assets/customer1.png' },
+  ];
 
   constructor(private sanitizer: DomSanitizer, private _dialog: MatDialog) {}
 
-
   flipCard(currentService: any = {}) {
+    event?.stopImmediatePropagation();
     currentService['isFlipped'] = !currentService['isFlipped'];
   }
 
   ngOnInit(): void {
-    this.iframeSrc = this.sanitizer.bypassSecurityTrustResourceUrl(
-      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.0571425999738!2d67.0687035!3d24.930123199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f03da43bd75%3A0x54b7c34c6ec61368!2sMATS%20Towing%20%26%20Transport!5e0!3m2!1sen!2s!4v1729808322419!5m2!1sen!2s'
-    );
+    this.iframeSrc = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.0571425999738!2d67.0687035!3d24.930123199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f03da43bd75%3A0x54b7c34c6ec61368!2sMATS%20Towing%20%26%20Transport!5e0!3m2!1sen!2s!4v1729808322419!5m2!1sen!2s');
   }
 
   openWhatsapp(contactNumber: number) {
     if (!contactNumber) return;
-    window.open(
-      `https://api.whatsapp.com/send?phone=${contactNumber}`,
-      '_blank'
-    );
+    window.open(`https://api.whatsapp.com/send?phone=${contactNumber}`, '_blank');
   }
 
   onEmailChange() {
@@ -131,12 +94,4 @@ export class MatsHomeComponent implements OnInit {
     }
   }
 
-  onOpenDetail(element: any) {
-    if (!element) return;
-    const dialogConfig = new MatDialogConfig();
-    dialogConfig.width = '60vw';
-    dialogConfig.data = element;
-    dialogConfig.disableClose = true;
-    this._dialog.open(ServiceDetailsComponent, dialogConfig);
-  }
 }

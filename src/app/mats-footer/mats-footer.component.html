@@ -1,20 +1,39 @@
-<footer class="footer bg-dark text-center text-white py-3">
-  <div class="container d-flex justify-content-between align-items-center">
+<footer class="footer bg-dark text-white py-3">
+  <div class="container pb-2 pt-2">
+    <div class="row">
+      <div class="col-md-3 mt-1">
+        <img src="../../assets/logo.png" alt="MATS" width="155px" height="55px" />
+      </div>
+      <div class="col-md-3 mt-1">
+        <div class="d-flex align-items-center mb-1">
+          <p class="footer-heading">Address</p>
+          <div> <mat-icon class="txt-clr">location_on</mat-icon> </div>
+        </div>
+        <span>Shop A12, Asmat Corner, <br> main Shahrah-e-Pakistan, <br> Block 7 Naseerabad, <br> Block 14 Gulberg Town, <br> Karachi, Sindh 75950, Pakistan.</span>
+      </div>
+      <div class="col-md-3 mt-1">
+        <div class="d-flex align-items-center mb-1">
+          <p class="footer-heading">Social Media Links</p> 
+        </div>
+        <div class="d-flex align-items-center w-100">
+          <div *ngFor="let _social of socialIcons">
+            <img [src]="_social.icon" width="30px" height="30px" class="mx-2 pointer" [matTooltip]="_social.toolTip"/>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 mt-1">
+        <div class="d-flex align-items-center">
+          <p class="footer-heading">Terms of Services Privacy Policy</p>
+          <div> <mat-icon class="txt-clr">admin_panel_settings</mat-icon> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container d-flex justify-content-between align-items-center mats-border pt-2">
     <p class="m-0">&copy; 2024 MATS. All Rights Reserved.</p>
     <p class="m-0">Made With &hearts; By In-Source Solutions</p>
-    <span>
-      <button mat-mini-fab class="background-clr text-white" (click)="scrollToTop()">
+    <button mat-mini-fab class="background-clr text-white" (click)="scrollToTop()">
         <mat-icon>arrow_upward</mat-icon>
     </button>
-    </span>
   </div>
 </footer>
-
-<!-- <div class="d-flex align-items-center justify-content-between w-100 background-clr footer">
-        <div class="text-white f-s-16 l-s-2">
-            Copyright © 2024 MATS TOWING & TRANSPORT
-        </div>
-        <div class="text-white f-s-16 l-s-2">
-            Made By In-Source Solutions
-        </div>
-    </div> -->
