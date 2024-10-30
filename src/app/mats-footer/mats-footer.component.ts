@@ -16,6 +16,7 @@ export class MatsFooterComponent {
     { icon: '../../assets/facebook.png', toolTip: 'Open Facebook'  },
     { icon: '../../assets/instagram (1).png', toolTip: 'Open Instagram' },
     { icon: '../../assets/gmail (1).png', toolTip: 'Open Gmail' },
+    { icon: '../../assets/linkedin.png', toolTip: 'Open Linkedin'},
   ];
 
   scrollToTop() {
