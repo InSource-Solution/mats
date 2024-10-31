@@ -37,7 +37,7 @@ export class MatsHomeComponent implements OnInit {
       isFlipped: false,
       subTitle: "Tow Truck Detail's",
       toolTip: "Open Tow Truck Detail's",
-      infoText: 'Fast Jump Start Service - Get Moving with MATS',
+      infoText: 'Fast Tow Truck Service - Get Moving with MATS',
       desc: 'Mobilize a Tow Truck in Lahore, Islamabad and Karachi within minutes to service your broken down vehicle.',
     },
   ];
