@@ -66,6 +66,7 @@ export class MatsHomeComponent implements OnInit {
   customerImgLst = [
     { src: '../../assets/customer2.png' },
     { src: '../../assets/customer1.png' },
+    { src: '../../assets/dewan.jpeg' },
   ];
 
   constructor(private sanitizer: DomSanitizer, private _dialog: MatDialog) {}
