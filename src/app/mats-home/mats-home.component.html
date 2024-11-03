@@ -64,16 +64,13 @@
         </div>
         <div class="services-section row mt-3">
             <div class="mt-2 col-md-4" *ngFor="let _service of serviceData" [class.flipped]="_service.isFlipped">
-                <mat-card class="pointer mat-card shadow service-card">
+                <mat-card class="pointer mat-card shadow service-card" (click)="flipCard(_service)" [matTooltip]="!_service.isFlipped ? _service.toolTip : ''">
+                    <div class="icon">
+                        <img [src]="_service.imgSrc" class="img">
+                    </div>
                     <div [ngClass]="_service.isFlipped ? 'mat-card-back' : 'mat-card-front'">
-                        <div class="w-100 px-2">
-                            <div class="d-flex align-items-center justify-content-between">
                                 <p class="mb-1 service-card-heading">{{ _service.isFlipped ? _service.subTitle : _service.title }}</p>
-                                <mat-icon (click)="flipCard(_service)" [matTooltip]="_service.toolTip"
-                                    class="txt-red f-s-20 f-w-b">flip_camera_android</mat-icon>
-                            </div>
-                            <p class="mb-1 f-s-11">{{ _service.isFlipped ? _service.desc : _service.infoText }}</p>
-                        </div>
+                            <p class="m-3 f-s-12">{{ _service.isFlipped ? _service.desc : _service.infoText }}</p>
                     </div>
                 </mat-card>
             </div>
