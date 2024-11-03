@@ -20,7 +20,8 @@ export class MatsHomeComponent implements OnInit {
       title: 'Car Carrier',
       isFlipped: false,
       subTitle: "Car Carrier Detail's",
-      toolTip: "Open Car Carrier Detail's",
+      imgSrc: "../../assets/car-carrier.png",
+      toolTip: "Click for Car Carrier Detail's",
       infoText: 'We at MATS provide the best Car & Motorcycle Towing services to our clients.',
       desc: 'Ship your car between Lahore, Karachi, Faisalabad,Peshawar and Islamabad at market competitive rates through our wide network of trusted partners.',
     },
@@ -28,7 +29,8 @@ export class MatsHomeComponent implements OnInit {
       title: 'Premium Towing Service',
       isFlipped:  false,
       subTitle: "Premium Towing Detail's",
-      toolTip: "Open Premium Towing Detail's",
+      imgSrc: "../../assets/towing.png",
+      toolTip: "Click for Premium Towing Detail's",
       infoText: 'Smooth, Safe, and Reliable Vehicle Towing with MATS',
       desc: "Specialized 20Ft Containerized Towing Service to move your Premium SUV's and Sports Cars with full safety between Lahore, Karachi and Islamabad.",
     },
@@ -36,7 +38,8 @@ export class MatsHomeComponent implements OnInit {
       title: 'Tow Truck',
       isFlipped: false,
       subTitle: "Tow Truck Detail's",
-      toolTip: "Open Tow Truck Detail's",
+      imgSrc: "../../assets/tow-truck.png",
+      toolTip: "Click for Tow Truck Detail's",
       infoText: 'Fast Tow Truck Service - Get Moving with MATS',
       desc: 'Mobilize a Tow Truck in Lahore, Islamabad and Karachi within minutes to service your broken down vehicle.',
     },
@@ -66,7 +69,7 @@ export class MatsHomeComponent implements OnInit {
   customerImgLst = [
     { src: '../../assets/customer2.png' },
     { src: '../../assets/customer1.png' },
-    { src: '../../assets/dewan.jpeg' },
+    { src: '../../assets/customer3.png' },
   ];
 
   constructor(private sanitizer: DomSanitizer, private _dialog: MatDialog) {}
