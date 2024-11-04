@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { MaterialModule } from '../material.module';
 import { CommonModule } from '@angular/common';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'mats-footer',
@@ -18,6 +21,14 @@ export class MatsFooterComponent {
     { icon: '../../assets/gmail (1).png', toolTip: 'Open Gmail', path: 'https://mail.google.com/mail/u/0/#inbox?compose=CllgCJftvWVwplGHzZnvslpvxlzVdVqcczTXvLqxMvdcvwstfppdZjLgFpxszjDXCXLKpjrRNZL' },
     { icon: '../../assets/linkedin.png', toolTip: 'Open Linkedin', path: 'https://www.linkedin.com/in/mats-towing-and-transport-869121318'},
   ];
+  isMobile$: Observable<boolean> | undefined;
+  isMobile: any;
+
+  constructor(private _breakPoint: BreakpointObserver){
+    this.isMobile$ = this._breakPoint.observe(Breakpoints.Handset).pipe(map(res => res.matches));
+    this.isMobile = this.isMobile$?.subscribe(mobile => this.isMobile = mobile);
+  
+  }
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });

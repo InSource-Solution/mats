@@ -1,17 +1,17 @@
 <footer class="footer bg-dark text-white py-3">
   <div class="container pb-2 pt-2">
     <div class="row">
-      <div class="col-md-3 mt-1">
+      <div class="col-md-3 mt-1" [class.text-center]="isMobile">
         <img src="../../assets/logo.png" alt="MATS" width="155px" height="55px" />
       </div>
-      <div class="col-md-3 mt-1">
+      <div class="col-md-3 mt-1" [class.text-center]="isMobile">
         <div class="d-flex align-items-center mb-1">
           <p class="footer-heading">Address</p>
           <div> <mat-icon class="txt-clr">location_on</mat-icon> </div>
         </div>
         <span>Shop A12, Asmat Corner, <br> main Shahrah-e-Pakistan, <br> Block 7 Naseerabad, <br> Block 14 Gulberg Town, <br> Karachi, Sindh 75950, Pakistan.</span>
       </div>
-      <div class="col-md-3 mt-1">
+      <div class="col-md-3 mt-1" [class.text-center]="isMobile">
         <div class="d-flex align-items-center mb-1">
           <p class="footer-heading">Social Media Links</p> 
         </div>
@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-3 mt-1">
+      <div class="col-md-3 mt-1" [class.text-center]="isMobile">
         <div class="d-flex align-items-center">
           <p class="footer-heading">Terms of Services Privacy Policy</p>
           <div> <mat-icon class="txt-clr">admin_panel_settings</mat-icon> </div>

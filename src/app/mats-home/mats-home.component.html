@@ -1,6 +1,6 @@
 <ng-container>
-    <div class="container-fuild bg-white shadow-sm sticky-top">
-        <div class="row w-100 d-flex align-items-center pt-2 pb-2">
+    <div class="container-fuild bg-white shadow-sm sticky">
+        <div class="row w-100 d-flex align-items-center pt-2 pb-2" *ngIf="!isMobile">
             <div class="col-md-3 text-center">
                 <img src="../../assets/logo.png" alt="MATS" width="155px" height="55px" />
             </div>
@@ -45,6 +45,60 @@
                         <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923158559450)">+92 315
                             8559450</span>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="row w-100 d-flex align-items-center pt-2 pb-2" *ngIf="isMobile">
+            <div class="col-6 text-start">
+                <img src="../../assets/logo.png" alt="MATS" width="155px" height="55px" />
+            </div>
+            <div class="col-2">
+                <button mat-mini-fab [matMenuTriggerFor]="menu" class="background-clr text-white">
+                    <mat-icon>schedule</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu" xPosition="after">
+                    <button mat-menu-item> 
+                        <p> Open Time </p>
+                        <p class="mb-0"> 24 Hours </p>
+                    </button>
+                  </mat-menu>
+            </div>
+            <div class="col-2">
+                <div class="d-flex align-items-center">
+                    <button mat-mini-fab class="background-clr text-white" [matMenuTriggerFor]="menu1" matTooltip="Call Us Now">
+                        <mat-icon>phone</mat-icon>
+                    </button>
+                    <mat-menu #menu1="matMenu" xPosition="after">
+                        <button mat-menu-item>
+                            <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923158559450)">+92 315 8559450</span>
+                        </button>
+                        <button mat-menu-item>
+                            <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923242887495)">+92 324 2887495</span>
+                        </button>
+                    </mat-menu>
+                </div>
+            </div>
+            <div class="col-2">
+                <div class="d-flex align-items-center">
+                    <button mat-mini-fab class="background-clr text-white" [matMenuTriggerFor]="menu2" matTooltip="Call On Whatsapp">
+                        <mat-icon>wifi_calling_3</mat-icon>
+                    </button>
+                    <mat-menu #menu2="matMenu" xPosition="after">
+                        <button mat-menu-item>
+                            <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923242887495)">+92 324 2887495</span>
+                        </button>
+                        <button mat-menu-item>
+                            <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923158559450)">+92 315 8559450</span>
+                        </button>
+                    </mat-menu>
+                    <!-- <div class="mx-2">
+                        <p class="m-0 p-0 f-w-600 txt-clr l-s-2">Whatsapp's Call</p>
+                        <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923242887495)">+92 324
+                            2887495 |
+                        </span>
+                        <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923158559450)">+92 315
+                            8559450</span>
+                    </div> -->
                 </div>
             </div>
         </div>

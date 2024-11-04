@@ -4,6 +4,9 @@ import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { MatDialog } from '@angular/material/dialog';
 import { MatsFooterComponent } from '../mats-footer/mats-footer.component';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-mats-home',
@@ -71,8 +74,13 @@ export class MatsHomeComponent implements OnInit {
     { src: '../../assets/customer1.png' },
     { src: '../../assets/customer3.png' },
   ];
+  isMobile$: Observable<boolean> | undefined;
+  isMobile: any;
 
-  constructor(private sanitizer: DomSanitizer, private _dialog: MatDialog) {}
+  constructor(private sanitizer: DomSanitizer, private _dialog: MatDialog, private _breakPoint: BreakpointObserver){
+    this.isMobile$ = this._breakPoint.observe(Breakpoints.Handset).pipe(map(res => res.matches));
+    this.isMobile = this.isMobile$?.subscribe(mobile => this.isMobile = mobile);
+  }
 
   flipCard(currentService: any = {}) {
     event?.stopImmediatePropagation();

@@ -10,6 +10,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatMenuModule } from '@angular/material/menu';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper'; 
 import { FormsModule } from '@angular/forms';
 
@@ -27,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatStepperModule,
     MatDialogModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatMenuModule
   ],
   exports: [
     MatButtonModule,
@@ -41,7 +43,8 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatStepperModule,
     MatDialogModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatMenuModule
   ],
   providers: [
     {

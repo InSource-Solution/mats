@@ -21,6 +21,12 @@
     }
 }
 
+.sticky {
+    position: sticky !important;
+    top: 0 !important; 
+    z-index: 1000 !important;
+  }
+
 .contact{
     background-color: white;
     border-top: 3px solid #f47820;
