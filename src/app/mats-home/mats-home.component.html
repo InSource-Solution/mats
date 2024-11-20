@@ -116,11 +116,11 @@
         <div class="">
             <p class="txt-clr heading mb-0">Service's</p>
         </div>
-        <div class="services-section row mt-3">
-            <div class="mt-2 col-md-4" *ngFor="let _service of serviceData" [class.flipped]="_service.isFlipped">
-                <mat-card class="pointer mat-card shadow service-card" (click)="flipCard(_service)" [matTooltip]="!_service.isFlipped ? _service.toolTip : ''">
-                    <div class="icon">
-                        <img [src]="_service.imgSrc" class="img">
+        <div class="services-section row mt-4" >
+            <div class="mt-2 col-md-4" *ngFor="let _service of serviceData" [class.mb-5]="isMobile" [class.flipped]="_service.isFlipped">
+                <mat-card class="pointer mat-card shadow service-card"  (click)="flipCard(_service)" [matTooltip]="!_service.isFlipped ? _service.toolTip : ''">
+                    <div class="icon" [ngClass]="isMobile ? 'icon-m' : 'icon' ">
+                        <img [src]="_service.imgSrc" [ngClass]="isMobile ? 'img-m' : 'img' " >
                     </div>
                     <div [ngClass]="_service.isFlipped ? 'mat-card-back' : 'mat-card-front'">
                                 <p class="mb-1 service-card-heading">{{ _service.isFlipped ? _service.subTitle : _service.title }}</p>
@@ -173,34 +173,33 @@
         <div class="pt-3">
             <mat-stepper class="bg-white overwrite-stepper">
                 <mat-step label="OUR LEADERSHIP" state="chat" class="stepLabel">
-                    <p class="">Underpin by our own offices and associates worldwide, Costa Logistics employs a team of
-                        professionals that follow up and follows through on each and every business we manage. With our
-                        Worldwide Service Network across 65 countries, we focus to be the most reliable Freight
-                        Forwarding, Removals and Relocation and Logistics Company in the market with an wonderful,
+                    <p class="">Underpin by our own offices and associates worldwide, Mats Towing & Transport employs a team of
+                        professionals that follow up and follows through on each and every business we manage. we focus to be the most reliable Towing & Transport
+                        , Removals and Relocation and Logistics Company in the market with an wonderful,
                         people-driven and committed approach to serving our valued customers.<br>
-                        While we are skilled in offering worldwide moving, freight forwarding, logistics related
+                        While we are skilled in offering worldwide moving, Towing & Transport, logistics related
                         services, we are not to be satisfied with only that: we also undertake to be committed advisors
                         to our valued customers at all times.
                     </p>
                 </mat-step>
                 <mat-step label="PROJECT HANDLING" state="chat" class="stepLabel">
-                    <p class="">Underpin by our own offices and associates worldwide, Costa Logistics employs a team of
+                    <p class="">Underpin by our own offices and associates worldwide, Mats Towing & Transport employs a team of
                         professionals that follow up and follows through on each and every business we manage. With our
-                        Worldwide Service Network across 65 countries, we focus to be the most reliable Freight
-                        Forwarding, Removals and Relocation and Logistics Company in the market with an wonderful,
+                        Worldwide Service Network across 65 countries, we focus to be the most reliable Towing & Transport
+                        , Removals and Relocation and Logistics Company in the market with an wonderful,
                         people-driven and committed approach to serving our valued customers.<br>
-                        While we are skilled in offering worldwide moving, freight forwarding, logistics related
+                        While we are skilled in offering worldwide moving, Towing & Transport, logistics related
                         services, we are not to be satisfied with only that: we also undertake to be committed advisors
                         to our valued customers at all times.
                     </p>
                 </mat-step>
                 <mat-step label="WHY US ?" state="chat" class="">
-                    <p class="">Underpin by our own offices and associates worldwide, Costa Logistics employs a team of
+                    <p class="">Underpin by our own offices and associates worldwide, Mats Towing & Transport employs a team of
                         professionals that follow up and follows through on each and every business we manage. With our
-                        Worldwide Service Network across 65 countries, we focus to be the most reliable Freight
-                        Forwarding, Removals and Relocation and Logistics Company in the market with an wonderful,
+                        Worldwide Service Network across 65 countries, we focus to be the most reliable Towing & Transport
+                        , Removals and Relocation and Logistics Company in the market with an wonderful,
                         people-driven and committed approach to serving our valued customers.<br>
-                        While we are skilled in offering worldwide moving, freight forwarding, logistics related
+                        While we are skilled in offering worldwide moving, Towing & Transport, logistics related
                         services, we are not to be satisfied with only that: we also undertake to be committed advisors
                         to our valued customers at all times.
                     </p>
@@ -227,9 +226,9 @@
 </ng-container>
 
 <ng-container>
-    <div class="container mt-5">
-        <div class="row d-flex align-items-center">
-            <div class="col-md-7">
+    <div class="container mt-5 b-r-5">
+        <div class="row d-flex align-items-center shadow">
+            <div class="col-md-6 p-5">
                 <p class="heading txt-clr">Contact Us</p>
                 <p>If you have any questions, feedback, or need assistance, <span class="txt-clr "> MATS Towing & Transport </span> is here to help!
                      Our dedicated team is committed to providing you with prompt and friendly support. Whether you’re seeking information about our services,
@@ -237,41 +236,45 @@
                        and we’ll do our best to respond as quickly as possible. Your satisfaction is our priority, and we value your input.
                      Thank you for choosing <span class="txt-clr "> MATS Towing & Transport </span> we look forward to connecting with you soon!</p>
             </div>
-            <div class="col-md-5">
-                <mat-card class="p-4 shadow contact">
-                    <form class="w-100">
-                        <mat-form-field class="w-100 form-input">
-                            <mat-label class="txt-black">Name</mat-label>
-                            <input matInput placeholder="Write Your Name..." class="text-white"
-                                [(ngModel)]="userModel.name" [ngModelOptions]="{standalone: true}">
-                        </mat-form-field>
-
-                        <mat-form-field class="w-100 form-input">
-                            <mat-label class="txt-black">Email</mat-label>
-                            <input matInput placeholder="Write Your Email..." class="text-white"
-                                [(ngModel)]="userModel.email" [ngModelOptions]="{standalone: true}"
-                                (change)="onEmailChange()">
-                            <span class="text-danger f-s-12" *ngIf="userModel.isError">Please enter a valid email
-                                address</span>
-                        </mat-form-field>
-
-                        <mat-form-field class="w-100 form-input">
-                            <mat-label class="txt-black">Phone</mat-label>
-                            <input matInput placeholder="Write Your Phone..." [(ngModel)]="userModel.phone"
-                                [ngModelOptions]="{standalone: true}">
-                        </mat-form-field>
-
-                        <mat-form-field class="w-100 form-input">
-                            <mat-label class="txt-black">Message</mat-label>
-                            <textarea matInput placeholder="Message....." [(ngModel)]="userModel.message"
-                                [ngModelOptions]="{standalone: true}"></textarea>
-                        </mat-form-field>
-
-                        <div class="d-flex justify-content-center">
+            <div class="col-md-6 p-5" [class.pt-0]="isMobile">
+                <form class="w-100">  
+                    <div class="row">
+                        <div class="col-md-6">
+                            <mat-form-field class="w-100 form-input">
+                                <mat-label class="txt-black">Name</mat-label>
+                                <input matInput placeholder="Write Your Name..." class="text-white"
+                                    [(ngModel)]="userModel.name" [ngModelOptions]="{standalone: true}">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field class="w-100 form-input">
+                                <mat-label class="txt-black">Email</mat-label>
+                                <input matInput placeholder="Write Your Email..." class="text-white"
+                                    [(ngModel)]="userModel.email" [ngModelOptions]="{standalone: true}"
+                                    (change)="onEmailChange()">
+                                <span class="text-danger f-s-12" *ngIf="userModel.isError">Please enter a valid email
+                                    address</span>
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field class="w-100 form-input">
+                                <mat-label class="txt-black">Phone</mat-label>
+                                <input matInput placeholder="Write Your Phone..." [(ngModel)]="userModel.phone"
+                                    [ngModelOptions]="{standalone: true}">
+                            </mat-form-field>
+                        </div>
+                        <div class="col-md-6">
+                            <mat-form-field class="w-100 form-input">
+                                <mat-label class="txt-black">Message</mat-label>
+                                <input matInput placeholder="Message....." [(ngModel)]="userModel.message"
+                                    [ngModelOptions]="{standalone: true}">
+                            </mat-form-field>        
+                        </div>
+                        <div class="col-md-12 d-flex justify-content-center mt-4">
                             <button mat-raised-button class="contact-btn">SEND</button>
                         </div>
-                    </form>
-                </mat-card>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

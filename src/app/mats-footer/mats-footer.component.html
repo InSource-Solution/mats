@@ -1,37 +1,37 @@
 <footer class="footer bg-dark text-white py-3">
   <div class="container pb-2 pt-2">
-    <div class="row">
-      <div class="col-md-3 mt-1" [class.text-center]="isMobile">
+    <div class="row pb-3">
+      <div class="col-md-2 mt-1" [class.text-center]="isMobile">
         <img src="../../assets/logo.png" alt="MATS" width="155px" height="55px" />
       </div>
-      <div class="col-md-3 mt-1" [class.text-center]="isMobile">
-        <div class="d-flex align-items-center mb-1">
-          <p class="footer-heading">Address</p>
+      <div class="col-md-4 mt-1" [class.text-center]="isMobile" [class.mt-2]="isMobile">
+        <div class="d-flex align-items-center mb-1" [class.justify-content-center]="isMobile" [class.mt-2]="isMobile">
+          <p class="footer-heading" [class.p-2]=" isMobile">Address</p>
           <div> <mat-icon class="txt-clr">location_on</mat-icon> </div>
         </div>
-        <span>Shop A12, Asmat Corner, <br> main Shahrah-e-Pakistan, <br> Block 7 Naseerabad, <br> Block 14 Gulberg Town, <br> Karachi, Sindh 75950, Pakistan.</span>
+        <span>Shop A12, Asmat Corner,main Shahrah-e-Pakistan, Block 7 Naseerabad,Block 14 Gulberg Town,Karachi, Sindh 75950, Pakistan.</span>
       </div>
-      <div class="col-md-3 mt-1" [class.text-center]="isMobile">
-        <div class="d-flex align-items-center mb-1">
+      <div class="col-md-3" [ngClass]="isMobile ? 'mt-4' : 'mt-1'">
+        <div class="d-flex align-items-center mb-1" [class.justify-content-center]="isMobile">
           <p class="footer-heading">Social Media Links</p> 
         </div>
-        <div class="d-flex align-items-center w-100">
+        <div class="d-flex align-items-center w-100" [ngClass]="isMobile ? 'mt-3 pb-2' : 'mt-4' " [class.justify-content-center]="isMobile">
           <div *ngFor="let _social of socialIcons">
             <img [src]="_social.icon" width="30px" height="30px" class="mx-2 pointer" [matTooltip]="_social.toolTip" (click)="routeToPage(_social.path)"/>
           </div>
         </div>
       </div>
-      <div class="col-md-3 mt-1" [class.text-center]="isMobile">
-        <div class="d-flex align-items-center">
+      <div class="col-md-3 mt-1" [class.mt-2]="isMobile">
+        <div class="d-flex align-items-center" [ngClass]="isMobile ? 'text-center pb-2' : ''">
           <p class="footer-heading">Terms of Services Privacy Policy</p>
-          <div> <mat-icon class="txt-clr">admin_panel_settings</mat-icon> </div>
+          <div *ngIf="!isMobile"> <mat-icon class="txt-clr">admin_panel_settings</mat-icon> </div>
         </div>
       </div>
     </div>
   </div>
   <div class="container d-flex justify-content-between align-items-center mats-border pt-2">
-    <p class="m-0">&copy; 2024 MATS. All Rights Reserved.</p>
-    <p class="m-0">Made With &hearts; By In-Source Solutions</p>
+    <p class="m-0 "> <span class=""> &copy; 2024 MATS. All Rights Reserved.</span> <br> Made With &hearts; By In-Source Solutions</p>
+     <!-- <p class="m-0"></p> -->
     <button mat-mini-fab class="background-clr text-white" (click)="scrollToTop()">
         <mat-icon>arrow_upward</mat-icon>
     </button>

@@ -16,6 +16,10 @@
         border-bottom-color: black;
     }
 
+    .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before:hover{
+        border-bottom-color: black;
+    }
+
     .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after{
         border-bottom-color: #f47820;
     }
@@ -25,24 +29,19 @@
     position: sticky !important;
     top: 0 !important; 
     z-index: 1000 !important;
-  }
-
-.contact{
-    background-color: white;
-    border-top: 3px solid #f47820;
-    border-bottom: 3px solid #f47820;
-}
+  }         
 
 .contact-btn{
-    border: 3px solid #f47820 !important;
+    border: 1px solid #f47820 !important;
     color: #f47820 !important;
     letter-spacing: 2px !important;
     background-color: white !important;
     font-weight: 600 !important;
+    border-radius: 20px;
 }
 
 .contact-btn:hover{
-    transition: 0.7s ease-in;
+    transition: 0.2s;
     color: white !important;
     letter-spacing: 2px !important;
     background-color: #f47820 !important;
@@ -155,8 +154,8 @@
 }
 
 .services-section .mat-card .icon {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     background: #fff;
     align-items: center;
     justify-content: center;
@@ -167,6 +166,19 @@
     transition: transform 1s;
 }
 
+.services-section .mat-card .icon-m {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 80px;
+    border-radius: 50%;
+    margin: -55px auto 0;
+    transition: transform 1s;
+}
+
 .mat-card:hover .img {
     transform: rotate(360deg);
 }
@@ -174,6 +186,16 @@
 .services-section .mat-card .img {
     width: 50px;
     height: 50px;
+    transition: transform 1s;
+    animation: rotateImage 2s linear infinite;
+}
+.mat-card:hover .img-m {
+    transform: rotate(360deg);
+}
+
+.services-section .mat-card .img-m {
+    width: 35px;
+    height: 35px;
     transition: transform 1s;
     animation: rotateImage 2s linear infinite;
 }

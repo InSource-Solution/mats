@@ -21,14 +21,9 @@ export class MatsFooterComponent {
     { icon: '../../assets/gmail (1).png', toolTip: 'Open Gmail', path: 'https://mail.google.com/mail/u/0/#inbox?compose=CllgCJftvWVwplGHzZnvslpvxlzVdVqcczTXvLqxMvdcvwstfppdZjLgFpxszjDXCXLKpjrRNZL' },
     { icon: '../../assets/linkedin.png', toolTip: 'Open Linkedin', path: 'https://www.linkedin.com/in/mats-towing-and-transport-869121318'},
   ];
-  isMobile$: Observable<boolean> | undefined;
   isMobile: any;
 
-  constructor(private _breakPoint: BreakpointObserver){
-    this.isMobile$ = this._breakPoint.observe(Breakpoints.Handset).pipe(map(res => res.matches));
-    this.isMobile = this.isMobile$?.subscribe(mobile => this.isMobile = mobile);
-  
-  }
+  constructor(private _breakPoint: BreakpointObserver){}
 
   scrollToTop() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -37,6 +32,16 @@ export class MatsFooterComponent {
   routeToPage(path: string) {
     if(!path) return;
     window.open(path, '_blank');
+  }
+
+  ngOnInit(): void {
+    this._breakPoint.observe(Breakpoints.Handset).subscribe(res => {
+      if(res.matches){
+        this.isMobile = true;
+      } else {
+        this.isMobile = false;
+      }
+    });
   }
 
 }
