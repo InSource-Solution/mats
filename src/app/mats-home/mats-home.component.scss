@@ -16,10 +16,6 @@
         border-bottom-color: black;
     }
 
-    .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::before:hover{
-        border-bottom-color: black;
-    }
-
     .mdc-text-field--filled:not(.mdc-text-field--disabled) .mdc-line-ripple::after{
         border-bottom-color: #f47820;
     }
@@ -199,3 +195,15 @@
     transition: transform 1s;
     animation: rotateImage 2s linear infinite;
 }
+
+ .mat-mdc-snack-bar-container .mdc-snackbar__surface{
+    background-color: rgb(27, 27, 27) !important;
+
+    div{
+        color: #f47820 !important;
+    }
+
+    button{
+        color: #f47820 !important;
+    }
+  }
