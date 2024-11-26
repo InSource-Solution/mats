@@ -38,7 +38,7 @@
                         <mat-icon>wifi_calling_3</mat-icon>
                     </button>
                     <div class="mx-2">
-                        <p class="m-0 p-0 f-w-600 txt-clr l-s-2">Whatsapp's Call</p>
+                        <p class="m-0 p-0 f-w-600 txt-clr l-s-2">Whatsapp Call</p>
                         <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923242887495)">+92 324
                             2887495 |
                         </span>
@@ -91,14 +91,6 @@
                             <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923158559450)">+92 315 8559450</span>
                         </button>
                     </mat-menu>
-                    <!-- <div class="mx-2">
-                        <p class="m-0 p-0 f-w-600 txt-clr l-s-2">Whatsapp's Call</p>
-                        <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923242887495)">+92 324
-                            2887495 |
-                        </span>
-                        <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923158559450)">+92 315
-                            8559450</span>
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -116,7 +108,7 @@
 <ng-container>
     <div class="container mt-5 mb-5">
         <div class="">
-            <p class="txt-clr heading mb-0">Service's</p>
+            <p class="txt-clr heading mb-0">Services</p>
         </div>
         <div class="services-section row mt-4" >
             <div class="mt-2 col-md-4" *ngFor="let _service of serviceData" [class.mb-5]="isMobile" [class.flipped]="_service.isFlipped">
@@ -136,7 +128,7 @@
 
 <ng-container>
     <div class="container mt-5 mb-5">
-        <p class="txt-clr heading">Customer's </p>
+        <p class="txt-clr heading">Customers </p>
         <div class="row mt-3">
             <div class="col-md-2 mt-1" *ngFor="let item of customerImgLst">
                 <img [src]="item.src" width="100%" class="shadow-sm">
@@ -175,35 +167,35 @@
         <div class="pt-3">
             <mat-stepper class="bg-white overwrite-stepper">
                 <mat-step label="OUR LEADERSHIP" state="chat" class="stepLabel">
-                    <p class="">Underpin by our own offices and associates worldwide, Mats Towing & Transport employs a team of
-                        professionals that follow up and follows through on each and every business we manage. we focus to be the most reliable Towing & Transport
-                        , Removals and Relocation and Logistics Company in the market with an wonderful,
-                        people-driven and committed approach to serving our valued customers.<br>
-                        While we are skilled in offering worldwide moving, Towing & Transport, logistics related
-                        services, we are not to be satisfied with only that: we also undertake to be committed advisors
-                        to our valued customers at all times.
+                    <p class="">Mats Towing & Transport is a leading provider of reliable and professional towing and transportation services.
+                          With years of experience in the industry, we specialize in offering prompt, efficient, and safe solutions for vehicles of 
+                          all sizes, whether it's a car, truck, or specialized equipment. Our team of skilled and courteous drivers ensures that every  
+                          job is completed with the highest level of care, making customer satisfaction our top priority. <br><br>
+                          We understand the importance of timely service and are available 24/7 to assist with any emergency or scheduled transport 
+                          needs. At Mats Towing & Transport, we take pride in our commitment to excellence, reliability, and the ability to handle any 
+                          towing challenge with precision and professionalism. Trust us to be your go-to solution for all your towing and transport 
+                          requirements.
                     </p>
                 </mat-step>
                 <mat-step label="PROJECT HANDLING" state="chat" class="stepLabel">
-                    <p class="">Underpin by our own offices and associates worldwide, Mats Towing & Transport employs a team of
-                        professionals that follow up and follows through on each and every business we manage. With our
-                        Worldwide Service Network across 65 countries, we focus to be the most reliable Towing & Transport
-                        , Removals and Relocation and Logistics Company in the market with an wonderful,
-                        people-driven and committed approach to serving our valued customers.<br>
-                        While we are skilled in offering worldwide moving, Towing & Transport, logistics related
-                        services, we are not to be satisfied with only that: we also undertake to be committed advisors
-                        to our valued customers at all times.
+                    <p class="">Mats Towing & Transport is a trusted leader in project handling, offering expert services for large-scale 
+                        transportation and logistics projects. We specialize in managing complex, oversized, and high-value equipment moves with 
+                        precision and efficiency. Our team is highly skilled in coordinating all aspects of project handling, from initial planning 
+                        to execution, ensuring smooth and timely deliveries. Whether it’s machinery, construction materials, or sensitive cargo, Mats Towing & Transport 
+                        is equipped with the latest tools and technology to handle diverse project needs. <br><br> We collaborate closely with clients to create tailored solutions 
+                        that meet specific project requirements, all while prioritizing safety and compliance with industry standards. With our extensive experience and 
+                        commitment to excellence, Mats Towing & Transport is the ideal partner for your next major project, ensuring reliable,
+                        hassle-free transport every time.
                     </p>
                 </mat-step>
                 <mat-step label="WHY US ?" state="chat" class="">
-                    <p class="">Underpin by our own offices and associates worldwide, Mats Towing & Transport employs a team of
-                        professionals that follow up and follows through on each and every business we manage. With our
-                        Worldwide Service Network across 65 countries, we focus to be the most reliable Towing & Transport
-                        , Removals and Relocation and Logistics Company in the market with an wonderful,
-                        people-driven and committed approach to serving our valued customers.<br>
-                        While we are skilled in offering worldwide moving, Towing & Transport, logistics related
-                        services, we are not to be satisfied with only that: we also undertake to be committed advisors
-                        to our valued customers at all times.
+                    <p class="">
+                        At Mats Towing & Transport, we stand out for our commitment to excellence, reliability, and customer satisfaction. 
+                        With years of experience in the towing and transport industry, we offer expert services for a wide range of needs, 
+                        from emergency towing to project handling and large equipment transport. Our team of highly skilled professionals is 
+                        dedicated to providing fast, safe, and efficient solutions, ensuring every job is done right the first time. <br><br> We use 
+                        state-of-the-art equipment to guarantee secure and reliable transportation. Available 24/7, we prioritize your peace of mind by offering flexible, 
+                        tailored services that meet your unique requirements. Choose Mats Towing & Transport for dependable service, every time.
                     </p>
                 </mat-step>
                 <ng-template matStepperIcon="chat">
@@ -273,7 +265,7 @@
                             </mat-form-field>        
                         </div>
                         <div class="col-md-12 d-flex justify-content-center mt-4">
-                            <button mat-raised-button class="contact-btn">SEND</button>
+                            <button mat-raised-button class="contact-btn" (click)="sendData()">SEND</button>
                         </div>
                     </div>
                 </form>
@@ -286,7 +278,7 @@
     <div class="container mt-5 mb-5">
         <div class="row d-flex align-items-center">
             <div class="col-md-7">
-                <p class="heading txt-clr">Frequently Asked Question (FAQ's)</p>
+                <p class="heading txt-clr">Frequently Asked Question (FAQs)</p>
                 <p>Have questions about our services? We’ve compiled a list of common inquiries to help you find the
                     information you need quickly. If you don’t see your question here, feel free to reach out to our
                     customer support team for further assistance!</p>

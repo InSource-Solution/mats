@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { MaterialModule } from '../material.module';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { MatDialog } from '@angular/material/dialog';
 import { MatsFooterComponent } from '../mats-footer/mats-footer.component';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-mats-home',
@@ -22,27 +21,27 @@ export class MatsHomeComponent implements OnInit {
     {
       title: 'Car Carrier',
       isFlipped: false,
-      subTitle: "Car Carrier Detail's",
+      subTitle: "Car Carrier Detail",
       imgSrc: "../../assets/car-carrier.png",
-      toolTip: "Click for Car Carrier Detail's",
+      toolTip: "Click for Car Carrier Detail",
       infoText: 'We at MATS provide the best Car & Motorcycle Towing services to our clients.',
       desc: 'Ship your car between Lahore, Karachi, Faisalabad,Peshawar and Islamabad at market competitive rates through our wide network of trusted partners.',
     },
     {
       title: 'Premium Towing Service',
       isFlipped:  false,
-      subTitle: "Premium Towing Detail's",
+      subTitle: "Premium Towing Detail",
       imgSrc: "../../assets/towing.png",
-      toolTip: "Click for Premium Towing Detail's",
+      toolTip: "Click for Premium Towing Detail",
       infoText: 'Smooth, Safe, and Reliable Vehicle Towing with MATS',
       desc: "Specialized 20Ft Containerized Towing Service to move your Premium SUV's and Sports Cars with full safety between Lahore, Karachi and Islamabad.",
     },
     {
       title: 'Tow Truck',
       isFlipped: false,
-      subTitle: "Tow Truck Detail's",
+      subTitle: "Tow Truck Detail",
       imgSrc: "../../assets/tow-truck.png",
-      toolTip: "Click for Tow Truck Detail's",
+      toolTip: "Click for Tow Truck Detail",
       infoText: 'Fast Tow Truck Service - Get Moving with MATS',
       desc: 'Mobilize a Tow Truck in Lahore, Islamabad and Karachi within minutes to service your broken down vehicle.',
     },
@@ -74,10 +73,10 @@ export class MatsHomeComponent implements OnInit {
     { src: '../../assets/customer1.png' },
     { src: '../../assets/customer3.png' },
   ];
-  isMobile$: Observable<boolean> | undefined;
   isMobile: any;
+  private apiUrl = 'https://mats.testing.com/api/Email';
 
-  constructor(private sanitizer: DomSanitizer, private _dialog: MatDialog, private _breakPoint: BreakpointObserver){}
+  constructor(private sanitizer: DomSanitizer, private _http: HttpClient, private _breakPoint: BreakpointObserver, private _snackBar: MatSnackBar){}
 
   flipCard(currentService: any = {}) {
     event?.stopImmediatePropagation();
@@ -108,4 +107,24 @@ export class MatsHomeComponent implements OnInit {
     }
   }
 
-}
+  async sendData(){
+    if(!this.userModel.name)
+      return this.showError("Required Name...!");
+
+    if(!this.userModel.email)
+      return this.showError("Required Email...!");
+
+    if(!this.userModel.message)
+      return this.showError("Required Message...!");
+
+    const res = await this._http.post<any>(`${this.apiUrl}/send`, this.userModel);
+    console.log(res);
+  }
+
+  showError(msg: string){
+    this._snackBar.open(msg, "Ok", {
+      duration: 5000,
+      panelClass: 'overwrite-snack-bar'
+    });
+  }
+} 

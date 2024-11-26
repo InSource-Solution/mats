@@ -4,8 +4,7 @@ import { MatsHomeComponent } from './mats-home/mats-home.component';
 import { MaterialModule } from './material.module';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', component: MatsHomeComponent }
+  { path: '', component: MatsHomeComponent }
 ];
 
 @NgModule({

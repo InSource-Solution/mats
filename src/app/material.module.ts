@@ -11,8 +11,10 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { STEPPER_GLOBAL_OPTIONS } from '@angular/cdk/stepper'; 
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [],
@@ -29,7 +31,9 @@ import { FormsModule } from '@angular/forms';
     MatStepperModule,
     MatDialogModule,
     MatExpansionModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule,
+    MatSnackBarModule
   ],
   exports: [
     MatButtonModule,
@@ -44,7 +48,9 @@ import { FormsModule } from '@angular/forms';
     MatStepperModule,
     MatDialogModule,
     MatExpansionModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule,
+    MatSnackBarModule
   ],
   providers: [
     {
