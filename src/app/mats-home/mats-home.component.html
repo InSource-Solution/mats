@@ -142,7 +142,7 @@
         <p class="txt-clr heading mb-0">ABOUT US</p>
         <div class="pt-3">
             <p class="">
-                Mats Towing &amp; Transport is one the leading international Transport, relocation and logistics
+                <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> is one the leading international Transport, relocation and logistics
                 management company delivering cost-saving solutions Around the World.<br><br>
 
                 Mats evolve comprehensive Transport, logistics and relocation service plans tailored to meet exact
@@ -160,42 +160,42 @@
                 culture. With our innovative solutions, we can help you to plan for business strategies, improve
                 customer service, accelerate order cycle times, and tightened control of the supply chain.<br><br>
 
-                For Further detail Please Do contact With Us <span class="txt-clr">MATSOFFICAL9&#64;GMAIL.COM</span>
+                For Further detail Please Do contact With Us <span class="txt-clr f-w-600">MATSOFFICAL9&#64;GMAIL.COM</span>
             </p>
         </div>
 
         <div class="pt-3">
             <mat-stepper class="bg-white overwrite-stepper">
                 <mat-step label="OUR LEADERSHIP" state="chat" class="stepLabel">
-                    <p class="">Mats Towing & Transport is a leading provider of reliable and professional towing and transportation services.
+                    <p class=""><span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> is a leading provider of reliable and professional towing and transportation services.
                           With years of experience in the industry, we specialize in offering prompt, efficient, and safe solutions for vehicles of 
                           all sizes, whether it's a car, truck, or specialized equipment. Our team of skilled and courteous drivers ensures that every  
                           job is completed with the highest level of care, making customer satisfaction our top priority. <br><br>
                           We understand the importance of timely service and are available 24/7 to assist with any emergency or scheduled transport 
-                          needs. At Mats Towing & Transport, we take pride in our commitment to excellence, reliability, and the ability to handle any 
+                          needs. At <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span>, we take pride in our commitment to excellence, reliability, and the ability to handle any 
                           towing challenge with precision and professionalism. Trust us to be your go-to solution for all your towing and transport 
                           requirements.
                     </p>
                 </mat-step>
                 <mat-step label="PROJECT HANDLING" state="chat" class="stepLabel">
-                    <p class="">Mats Towing & Transport is a trusted leader in project handling, offering expert services for large-scale 
+                    <p class=""><span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> is a trusted leader in project handling, offering expert services for large-scale 
                         transportation and logistics projects. We specialize in managing complex, oversized, and high-value equipment moves with 
                         precision and efficiency. Our team is highly skilled in coordinating all aspects of project handling, from initial planning 
                         to execution, ensuring smooth and timely deliveries. Whether it’s machinery, construction materials, or sensitive cargo, Mats Towing & Transport 
                         is equipped with the latest tools and technology to handle diverse project needs. <br><br> We collaborate closely with clients to create tailored solutions 
                         that meet specific project requirements, all while prioritizing safety and compliance with industry standards. With our extensive experience and 
-                        commitment to excellence, Mats Towing & Transport is the ideal partner for your next major project, ensuring reliable,
+                        commitment to excellence, <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> is the ideal partner for your next major project, ensuring reliable,
                         hassle-free transport every time.
                     </p>
                 </mat-step>
                 <mat-step label="WHY US ?" state="chat" class="">
                     <p class="">
-                        At Mats Towing & Transport, we stand out for our commitment to excellence, reliability, and customer satisfaction. 
+                        At <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span>, we stand out for our commitment to excellence, reliability, and customer satisfaction. 
                         With years of experience in the towing and transport industry, we offer expert services for a wide range of needs, 
                         from emergency towing to project handling and large equipment transport. Our team of highly skilled professionals is 
                         dedicated to providing fast, safe, and efficient solutions, ensuring every job is done right the first time. <br><br> We use 
                         state-of-the-art equipment to guarantee secure and reliable transportation. Available 24/7, we prioritize your peace of mind by offering flexible, 
-                        tailored services that meet your unique requirements. Choose Mats Towing & Transport for dependable service, every time.
+                        tailored services that meet your unique requirements. Choose <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> for dependable service, every time.
                     </p>
                 </mat-step>
                 <ng-template matStepperIcon="chat">
@@ -224,11 +224,11 @@
         <div class="row d-flex align-items-center shadow">
             <div class="col-md-6 p-5">
                 <p class="heading txt-clr">Contact Us</p>
-                <p>If you have any questions, feedback, or need assistance, <span class="txt-clr "> MATS Towing & Transport </span> is here to help!
+                <p>If you have any questions, feedback, or need assistance, <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> is here to help!
                      Our dedicated team is committed to providing you with prompt and friendly support. Whether you’re seeking information about our services,
                       need technical assistance, or want to share your thoughts, we encourage you to reach out. You can contact us via email, phone, or our online contact form,
                        and we’ll do our best to respond as quickly as possible. Your satisfaction is our priority, and we value your input.
-                     Thank you for choosing <span class="txt-clr "> MATS Towing & Transport </span> we look forward to connecting with you soon!</p>
+                     Thank you for choosing <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> we look forward to connecting with you soon!</p>
             </div>
             <div class="col-md-6 p-5" [class.pt-0]="isMobile">
                 <form class="w-100">  
@@ -276,27 +276,12 @@
 
 <ng-container>
     <div class="container mt-5 mb-5">
-        <div class="row d-flex align-items-center">
-            <div class="col-md-7">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="col-md-12">
                 <p class="heading txt-clr">Frequently Asked Question (FAQs)</p>
                 <p>Have questions about our services? We’ve compiled a list of common inquiries to help you find the
                     information you need quickly. If you don’t see your question here, feel free to reach out to our
                     customer support team for further assistance!</p>
-            </div>
-            <div class="col-md-5">
-                <mat-accordion class="panel">
-                    <ng-container *ngFor="let item of faqData">
-                        <mat-expansion-panel class="mb-2 p-1" (opened)="item.isPanelOpen = true"
-                            (closed)="item.isPanelOpen = false">
-                            <mat-expansion-panel-header>
-                                <mat-panel-title class="text-dark">
-                                    {{ item.ques }}
-                                </mat-panel-title>
-                            </mat-expansion-panel-header>
-                            <p class="text-dark">{{ item.ans }}</p>
-                        </mat-expansion-panel>
-                    </ng-container>
-                </mat-accordion>
             </div>
         </div>
     </div>
