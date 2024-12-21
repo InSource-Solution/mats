@@ -100,7 +100,7 @@ export class MatsHomeComponent implements OnInit {
   }
 
   onEmailChange() {
-    if (!this?.userModel?.email?.includes('@gmail.com')) {
+    if (!this?.userModel?.email?.includes('@')) {
       this.userModel.isError = true;
     } else {
       this.userModel.isError = false;
@@ -119,11 +119,11 @@ export class MatsHomeComponent implements OnInit {
 
     this.isLoading = true;
     delete this.userModel.isError;
-    const res = await this._http.post<any>(`api/formsubmission`, this.userModel);
+    const res = await this._http.post<any>(`http://backend.matstowing.com/api/formsubmission`, this.userModel);
     this.isLoading = false;
     res.subscribe((response) => {
       if(response){
-        this.showError("Email Successfully Sent...!");
+        this.showError("Submit Successfully...!");
       }
     },
     (error) => {
@@ -133,7 +133,7 @@ export class MatsHomeComponent implements OnInit {
 
   showError(msg: string){
     this._snackBar.open(msg, "Ok", {
-      duration: 5000,
+      duration: 10000,
       panelClass: 'overwrite-snack-bar'
     });
   }
