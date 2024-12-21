@@ -253,19 +253,22 @@
                         <div class="col-md-6">
                             <mat-form-field class="w-100 form-input">
                                 <mat-label class="txt-black">Phone</mat-label>
-                                <input matInput placeholder="Write Your Phone..." [(ngModel)]="userModel.phone"
+                                <input matInput placeholder="Write Your Phone..." [(ngModel)]="userModel.phoneNumber"
                                     [ngModelOptions]="{standalone: true}">
                             </mat-form-field>
                         </div>
                         <div class="col-md-6">
                             <mat-form-field class="w-100 form-input">
                                 <mat-label class="txt-black">Message</mat-label>
-                                <input matInput placeholder="Message....." [(ngModel)]="userModel.message"
+                                <input matInput placeholder="Message....." [(ngModel)]="userModel.text"
                                     [ngModelOptions]="{standalone: true}">
                             </mat-form-field>        
                         </div>
                         <div class="col-md-12 d-flex justify-content-center mt-4">
-                            <button mat-raised-button class="contact-btn" (click)="sendData()">SEND</button>
+                            <button *ngIf="!isLoading" mat-raised-button class="contact-btn" (click)="sendData()">SEND</button>
+                          <div *ngIf="isLoading">
+                            <mat-spinner diameter="25"></mat-spinner>
+                          </div>
                         </div>
                     </div>
                 </form>

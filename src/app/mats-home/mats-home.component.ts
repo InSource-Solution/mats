@@ -74,7 +74,7 @@ export class MatsHomeComponent implements OnInit {
     { src: '../../assets/customer3.png' },
   ];
   isMobile: any;
-  private apiUrl = 'https://mats.testing.com/api/Email';
+  isLoading: boolean = false;
 
   constructor(private sanitizer: DomSanitizer, private _http: HttpClient, private _breakPoint: BreakpointObserver, private _snackBar: MatSnackBar){}
 
@@ -114,11 +114,21 @@ export class MatsHomeComponent implements OnInit {
     if(!this.userModel.email)
       return this.showError("Required Email...!");
 
-    if(!this.userModel.message)
+    if(!this.userModel.text)
       return this.showError("Required Message...!");
 
-    const res = await this._http.post<any>(`${this.apiUrl}/send`, this.userModel);
-    console.log(res);
+    this.isLoading = true;
+    delete this.userModel.isError;
+    const res = await this._http.post<any>(`api/formsubmission`, this.userModel);
+    this.isLoading = false;
+    res.subscribe((response) => {
+      if(response){
+        this.showError("Email Successfully Sent...!");
+      }
+    },
+    (error) => {
+      this.showError("Email Not Sent...!");
+    })
   }
 
   showError(msg: string){
