@@ -57,38 +57,44 @@
                     <mat-icon>schedule</mat-icon>
                 </button>
                 <mat-menu #menu="matMenu" xPosition="after">
-                    <button mat-menu-item> 
+                    <button mat-menu-item>
                         <p> Open Time </p>
                         <p class="mb-0"> 24 Hours </p>
                     </button>
-                  </mat-menu>
+                </mat-menu>
             </div>
             <div class="col-2">
                 <div class="d-flex align-items-center">
-                    <button mat-mini-fab class="background-clr text-white" [matMenuTriggerFor]="menu1" matTooltip="Call Us Now">
+                    <button mat-mini-fab class="background-clr text-white" [matMenuTriggerFor]="menu1"
+                        matTooltip="Call Us Now">
                         <mat-icon>phone</mat-icon>
                     </button>
                     <mat-menu #menu1="matMenu" xPosition="after">
                         <button mat-menu-item>
-                            <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923158559450)">+92 315 8559450</span>
+                            <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923158559450)">+92
+                                315 8559450</span>
                         </button>
                         <button mat-menu-item>
-                            <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923242887495)">+92 324 2887495</span>
+                            <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923242887495)">+92
+                                324 2887495</span>
                         </button>
                     </mat-menu>
                 </div>
             </div>
             <div class="col-2">
                 <div class="d-flex align-items-center">
-                    <button mat-mini-fab class="background-clr text-white" [matMenuTriggerFor]="menu2" matTooltip="Call On Whatsapp">
+                    <button mat-mini-fab class="background-clr text-white" [matMenuTriggerFor]="menu2"
+                        matTooltip="Call On Whatsapp">
                         <mat-icon>wifi_calling_3</mat-icon>
                     </button>
                     <mat-menu #menu2="matMenu" xPosition="after">
                         <button mat-menu-item>
-                            <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923242887495)">+92 324 2887495</span>
+                            <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923242887495)">+92
+                                324 2887495</span>
                         </button>
                         <button mat-menu-item>
-                            <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923158559450)">+92 315 8559450</span>
+                            <span class="pointer" matTooltip="Open Whatsapp" (click)="openWhatsapp(923158559450)">+92
+                                315 8559450</span>
                         </button>
                     </mat-menu>
                 </div>
@@ -101,7 +107,7 @@
     <div class="w-100">
         <video height="400%" width="100%" autoplay loop muted>
             <source src="../../assets/map Animation.mp4">
-          </video>
+        </video>
     </div>
 </ng-container>
 
@@ -110,15 +116,18 @@
         <div class="">
             <p class="txt-clr heading mb-0">Services</p>
         </div>
-        <div class="services-section row mt-4" >
-            <div class="mt-2 col-md-4" *ngFor="let _service of serviceData" [class.mb-5]="isMobile" [class.flipped]="_service.isFlipped">
-                <mat-card class="pointer mat-card shadow service-card"  (click)="flipCard(_service)" [matTooltip]="!_service.isFlipped ? _service.toolTip : ''">
+        <div class="services-section row mt-4">
+            <div class="mt-2 col-md-4" *ngFor="let _service of serviceData" [class.mb-5]="isMobile"
+                [class.flipped]="_service.isFlipped">
+                <mat-card class="pointer mat-card shadow service-card" (click)="flipCard(_service)"
+                    [matTooltip]="!_service.isFlipped ? _service.toolTip : ''">
                     <div class="icon" [ngClass]="isMobile ? 'icon-m' : 'icon' ">
-                        <img [src]="_service.imgSrc" [ngClass]="isMobile ? 'img-m' : 'img' " >
+                        <img [src]="_service.imgSrc" [ngClass]="isMobile ? 'img-m' : 'img' ">
                     </div>
                     <div [ngClass]="_service.isFlipped ? 'mat-card-back' : 'mat-card-front'">
-                                <p class="mb-1 service-card-heading">{{ _service.isFlipped ? _service.subTitle : _service.title }}</p>
-                            <p class="m-3 f-s-12">{{ _service.isFlipped ? _service.desc : _service.infoText }}</p>
+                        <p class="mb-1 service-card-heading">{{ _service.isFlipped ? _service.subTitle : _service.title
+                            }}</p>
+                        <p class="m-3 f-s-12">{{ _service.isFlipped ? _service.desc : _service.infoText }}</p>
                     </div>
                 </mat-card>
             </div>
@@ -142,7 +151,8 @@
         <p class="txt-clr heading mb-0">ABOUT US</p>
         <div class="pt-3">
             <p class="">
-                <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> is one the leading international Transport, relocation and logistics
+                <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> is one the leading international
+                Transport, relocation and logistics
                 management company delivering cost-saving solutions Around the World.<br><br>
 
                 Mats evolve comprehensive Transport, logistics and relocation service plans tailored to meet exact
@@ -160,42 +170,63 @@
                 culture. With our innovative solutions, we can help you to plan for business strategies, improve
                 customer service, accelerate order cycle times, and tightened control of the supply chain.<br><br>
 
-                For Further detail Please Do contact With Us <span class="txt-clr f-w-600">MATSOFFICAL9&#64;GMAIL.COM</span>
+                For Further detail Please Do contact With Us <span
+                    class="txt-clr f-w-600">MATSOFFICAL9&#64;GMAIL.COM</span>
             </p>
         </div>
 
         <div class="pt-3">
             <mat-stepper class="bg-white overwrite-stepper">
                 <mat-step label="OUR LEADERSHIP" state="chat" class="stepLabel">
-                    <p class=""><span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> is a leading provider of reliable and professional towing and transportation services.
-                          With years of experience in the industry, we specialize in offering prompt, efficient, and safe solutions for vehicles of 
-                          all sizes, whether it's a car, truck, or specialized equipment. Our team of skilled and courteous drivers ensures that every  
-                          job is completed with the highest level of care, making customer satisfaction our top priority. <br><br>
-                          We understand the importance of timely service and are available 24/7 to assist with any emergency or scheduled transport 
-                          needs. At <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span>, we take pride in our commitment to excellence, reliability, and the ability to handle any 
-                          towing challenge with precision and professionalism. Trust us to be your go-to solution for all your towing and transport 
-                          requirements.
+                    <p class=""><span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> is a leading provider
+                        of reliable and professional towing and transportation services.
+                        With years of experience in the industry, we specialize in offering prompt, efficient, and safe
+                        solutions for vehicles of
+                        all sizes, whether it's a car, truck, or specialized equipment. Our team of skilled and
+                        courteous drivers ensures that every
+                        job is completed with the highest level of care, making customer satisfaction our top priority.
+                        <br><br>
+                        We understand the importance of timely service and are available 24/7 to assist with any
+                        emergency or scheduled transport
+                        needs. At <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span>, we take pride in
+                        our commitment to excellence, reliability, and the ability to handle any
+                        towing challenge with precision and professionalism. Trust us to be your go-to solution for all
+                        your towing and transport
+                        requirements.
                     </p>
                 </mat-step>
                 <mat-step label="PROJECT HANDLING" state="chat" class="stepLabel">
-                    <p class=""><span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> is a trusted leader in project handling, offering expert services for large-scale 
-                        transportation and logistics projects. We specialize in managing complex, oversized, and high-value equipment moves with 
-                        precision and efficiency. Our team is highly skilled in coordinating all aspects of project handling, from initial planning 
-                        to execution, ensuring smooth and timely deliveries. Whether it’s machinery, construction materials, or sensitive cargo, Mats Towing & Transport 
-                        is equipped with the latest tools and technology to handle diverse project needs. <br><br> We collaborate closely with clients to create tailored solutions 
-                        that meet specific project requirements, all while prioritizing safety and compliance with industry standards. With our extensive experience and 
-                        commitment to excellence, <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> is the ideal partner for your next major project, ensuring reliable,
+                    <p class=""><span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> is a trusted leader
+                        in project handling, offering expert services for large-scale
+                        transportation and logistics projects. We specialize in managing complex, oversized, and
+                        high-value equipment moves with
+                        precision and efficiency. Our team is highly skilled in coordinating all aspects of project
+                        handling, from initial planning
+                        to execution, ensuring smooth and timely deliveries. Whether it’s machinery, construction
+                        materials, or sensitive cargo, Mats Towing & Transport
+                        is equipped with the latest tools and technology to handle diverse project needs. <br><br> We
+                        collaborate closely with clients to create tailored solutions
+                        that meet specific project requirements, all while prioritizing safety and compliance with
+                        industry standards. With our extensive experience and
+                        commitment to excellence, <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> is
+                        the ideal partner for your next major project, ensuring reliable,
                         hassle-free transport every time.
                     </p>
                 </mat-step>
                 <mat-step label="WHY US ?" state="chat" class="">
                     <p class="">
-                        At <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span>, we stand out for our commitment to excellence, reliability, and customer satisfaction. 
-                        With years of experience in the towing and transport industry, we offer expert services for a wide range of needs, 
-                        from emergency towing to project handling and large equipment transport. Our team of highly skilled professionals is 
-                        dedicated to providing fast, safe, and efficient solutions, ensuring every job is done right the first time. <br><br> We use 
-                        state-of-the-art equipment to guarantee secure and reliable transportation. Available 24/7, we prioritize your peace of mind by offering flexible, 
-                        tailored services that meet your unique requirements. Choose <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> for dependable service, every time.
+                        At <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span>, we stand out for our
+                        commitment to excellence, reliability, and customer satisfaction.
+                        With years of experience in the towing and transport industry, we offer expert services for a
+                        wide range of needs,
+                        from emergency towing to project handling and large equipment transport. Our team of highly
+                        skilled professionals is
+                        dedicated to providing fast, safe, and efficient solutions, ensuring every job is done right the
+                        first time. <br><br> We use
+                        state-of-the-art equipment to guarantee secure and reliable transportation. Available 24/7, we
+                        prioritize your peace of mind by offering flexible,
+                        tailored services that meet your unique requirements. Choose <span class="txt-clr f-w-600"> Mats
+                            Towing &amp; Transport </span> for dependable service, every time.
                     </p>
                 </mat-step>
                 <ng-template matStepperIcon="chat">
@@ -224,14 +255,19 @@
         <div class="row d-flex align-items-center shadow">
             <div class="col-md-6 p-5">
                 <p class="heading txt-clr">Contact Us</p>
-                <p>If you have any questions, feedback, or need assistance, <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> is here to help!
-                     Our dedicated team is committed to providing you with prompt and friendly support. Whether you’re seeking information about our services,
-                      need technical assistance, or want to share your thoughts, we encourage you to reach out. You can contact us via email, phone, or our online contact form,
-                       and we’ll do our best to respond as quickly as possible. Your satisfaction is our priority, and we value your input.
-                     Thank you for choosing <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> we look forward to connecting with you soon!</p>
+                <p>If you have any questions, feedback, or need assistance, <span class="txt-clr f-w-600"> Mats Towing
+                        &amp; Transport </span> is here to help!
+                    Our dedicated team is committed to providing you with prompt and friendly support. Whether you’re
+                    seeking information about our services,
+                    need technical assistance, or want to share your thoughts, we encourage you to reach out. You can
+                    contact us via email, phone, or our online contact form,
+                    and we’ll do our best to respond as quickly as possible. Your satisfaction is our priority, and we
+                    value your input.
+                    Thank you for choosing <span class="txt-clr f-w-600"> Mats Towing &amp; Transport </span> we look
+                    forward to connecting with you soon!</p>
             </div>
             <div class="col-md-6 p-5" [class.pt-0]="isMobile">
-                <form class="w-100">  
+                <form class="w-100">
                     <div class="row">
                         <div class="col-md-6">
                             <mat-form-field class="w-100 form-input">
@@ -262,13 +298,10 @@
                                 <mat-label class="txt-black">Message</mat-label>
                                 <input matInput placeholder="Message....." [(ngModel)]="userModel.text"
                                     [ngModelOptions]="{standalone: true}">
-                            </mat-form-field>        
+                            </mat-form-field>
                         </div>
                         <div class="col-md-12 d-flex justify-content-center mt-4">
-                            <button *ngIf="!isLoading" mat-raised-button class="contact-btn" (click)="sendData()">SEND</button>
-                          <div *ngIf="isLoading">
-                            <mat-spinner diameter="25"></mat-spinner>
-                          </div>
+                            <button mat-raised-button class="contact-btn" (click)="sendData()">SEND</button>
                         </div>
                     </div>
                 </form>
@@ -293,3 +326,13 @@
 <ng-container>
     <mats-footer></mats-footer>
 </ng-container>
+
+<ng-template #success>
+    <h2 mat-dialog-title>Success</h2>
+    <mat-dialog-content>
+        <p>Submit Successfully...!</p>
+    </mat-dialog-content>
+    <mat-dialog-actions>
+        <button mat-button mat-dialog-close >Ok</button>
+    </mat-dialog-actions>
+</ng-template>

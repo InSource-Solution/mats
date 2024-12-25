@@ -1,6 +1,6 @@
 {
     "/api":{
-        "target": "http://backend.matstowing.com/",
+        "target": "https://backend.matstowing.com/",
         "secure": false,
         "changeOrigin": true,
         "logLevel": "debug"

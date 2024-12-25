@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild, viewChild } from '@angular/core';
 import { MaterialModule } from '../material.module';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
@@ -6,6 +6,7 @@ import { MatsFooterComponent } from '../mats-footer/mats-footer.component';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-mats-home',
@@ -74,9 +75,9 @@ export class MatsHomeComponent implements OnInit {
     { src: '../../assets/customer3.png' },
   ];
   isMobile: any;
-  isLoading: boolean = false;
+  @ViewChild('success') success?: TemplateRef<any>;
 
-  constructor(private sanitizer: DomSanitizer, private _http: HttpClient, private _breakPoint: BreakpointObserver, private _snackBar: MatSnackBar){}
+  constructor(private sanitizer: DomSanitizer, private _http: HttpClient, private _breakPoint: BreakpointObserver, private _snackBar: MatSnackBar, public dialog: MatDialog){}
 
   flipCard(currentService: any = {}) {
     event?.stopImmediatePropagation();
@@ -117,13 +118,18 @@ export class MatsHomeComponent implements OnInit {
     if(!this.userModel.text)
       return this.showError("Required Message...!");
 
-    this.isLoading = true;
+    if(this.userModel.isError) {
+      this.userModel.email = "";
+      return this.showError('Email not correct format..');
+    }
     delete this.userModel.isError;
-    const res = await this._http.post<any>(`http://backend.matstowing.com/api/formsubmission`, this.userModel);
-    this.isLoading = false;
+    const res = await this._http.post<any>(`/api/formsubmission`, this.userModel);
     res.subscribe((response) => {
       if(response){
-        this.showError("Submit Successfully...!");
+        this.userModel = {};
+        // this.dialog.open(this.success)
+        // (this.success)
+        // this.showError("Submit Successfully...!");
       }
     },
     (error) => {
