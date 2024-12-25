@@ -6,7 +6,8 @@ import { MatsFooterComponent } from '../mats-footer/mats-footer.component';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
+import { ServiceDetailsComponent } from '../service-details/service-details.component';
 
 @Component({
   selector: 'app-mats-home',
@@ -120,20 +121,28 @@ export class MatsHomeComponent implements OnInit {
 
     if(this.userModel.isError) {
       this.userModel.email = "";
-      return this.showError('Email not correct format..');
+      return this.showError('please enter a valid email address...!');
     }
     delete this.userModel.isError;
-    const res = await this._http.post<any>(`/api/formsubmission`, this.userModel);
+    const res = await this._http.post<any>(`https://backend.matstowing.com/api/formsubmission`, this.userModel);
     res.subscribe((response) => {
       if(response){
+        const dialogData = new MatDialogConfig();
+        dialogData.data = {
+          isSuccess: true
+        };
+        dialogData.width = "30vw";
+        this.dialog.open(ServiceDetailsComponent, dialogData);
         this.userModel = {};
-        // this.dialog.open(this.success)
-        // (this.success)
-        // this.showError("Submit Successfully...!");
       }
     },
     (error) => {
-      this.showError("Email Not Sent...!");
+      const dialogData = new MatDialogConfig();
+      dialogData.data = {
+        isError: true
+      };
+      dialogData.width = "30vw";
+      this.dialog.open(ServiceDetailsComponent, dialogData);
     })
   }
 
