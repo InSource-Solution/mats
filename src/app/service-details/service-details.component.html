@@ -1,19 +1,15 @@
-<ng-container *ngIf="_dialogData?.isSuccess">
-    <h2 mat-dialog-title>Success</h2>
-    <mat-dialog-content>
-        <p>Submit Successfully...!</p>
-    </mat-dialog-content>
-    <mat-dialog-actions class="w-100 d-flex justify-content-end">
-        <button mat-button mat-dialog-close >Ok</button>
-    </mat-dialog-actions>
+<ng-container *ngIf="_dialogData?.isSuccess; else errorMessage">
+  <div class="dialog-container success">
+    <p class="m-0 p-0 f-s-18 txt-green d-flex align-items-center">
+      <mat-icon class="txt-green m-1">check_circle</mat-icon> Sent Successfully...!
+    </p>
+  </div>
 </ng-container>
 
-<ng-container *ngIf="_dialogData?.isError">
-    <h2 mat-dialog-title>Error</h2>
-    <mat-dialog-content>
-        <p>Email Not Sent...!</p>
-    </mat-dialog-content>
-    <mat-dialog-actions class="w-100 d-flex justify-content-end">
-        <button mat-button mat-dialog-close >Ok</button>
-    </mat-dialog-actions>
-</ng-container>
+<ng-template #errorMessage>
+  <div class="dialog-container error">
+    <p class="m-0 p-0 f-s-18 txt-red d-flex align-items-center">
+      <mat-icon class="txt-red m-1">error</mat-icon>Email Not Sent...!
+    </p>
+  </div>
+</ng-template>
