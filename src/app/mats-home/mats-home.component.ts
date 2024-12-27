@@ -127,23 +127,24 @@ export class MatsHomeComponent implements OnInit {
     const res = await this._http.post<any>(`https://backend.matstowing.com/api/formsubmission`, this.userModel);
     res.subscribe((response) => {
       if(response){
-        const dialogData = new MatDialogConfig();
-        dialogData.data = {
-          isSuccess: true
-        };
-        dialogData.width = "30vw";
-        this.dialog.open(ServiceDetailsComponent, dialogData);
+        this.openDialog({
+          isSuccess: true,
+        });
         this.userModel = {};
       }
     },
     (error) => {
-      const dialogData = new MatDialogConfig();
-      dialogData.data = {
-        isError: true
-      };
-      dialogData.width = "30vw";
-      this.dialog.open(ServiceDetailsComponent, dialogData);
-    })
+        this.openDialog({
+          isError: true,
+        });
+      }
+    );
+  }
+
+  openDialog(dialogData: any) {
+    const config = new MatDialogConfig();
+    config.data = dialogData;
+    this.dialog.open(ServiceDetailsComponent, config);
   }
 
   showError(msg: string){
